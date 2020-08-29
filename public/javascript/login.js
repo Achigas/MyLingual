@@ -43,4 +43,8 @@ async function signupFormHandler(event) {
 
 }
 
+//redirect to dashbaord 
+// document.location.replace('/dashboard')
+
+
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
