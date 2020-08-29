@@ -18,14 +18,20 @@ Comment.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-Post.belongsTo(Category, {
+Post.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
+});
+
+Tag.belongsToMany(Languages, {
+    through: Languages,
+    foreignKey: 'tag_id',
 });
 
 module.exports = {
     User,
     Comment,
-    Post, 
-    Category
+    Post,
+    Category, 
+    Languages
 };
