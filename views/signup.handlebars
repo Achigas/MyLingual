@@ -1,0 +1,36 @@
+<form class="signup-form">
+  <strong>GET STARTED!</strong> 
+  <p>Enter username, password, and choose a study language below. </p>
+  <div class="signup">
+    <label for="username-signup">Username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="email-signup">Email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">Password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <label for="password-signup">Password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div class="languages options row justify-content-around">
+      <label for="language-choice">Language:</label>
+      <select name="language-choice" id="language-dropdown" class="btn-choice col-10 col-md-8 col-xl-2 m-1"></select>
+       <option value="" disabled selected>Choose one.</option>
+        {{#each this}}
+        <section class="language">
+            <div class="meta">
+            <option value="{{language_name}}">{{language_name}}</option>  
+            </div>
+        </section>
+        {{/each}}
+  <div>
+    <button type="submit">Sign Up</button>
+  </div>
+</form>
+
+<script src="/javascript/sign-up.js"></script>
