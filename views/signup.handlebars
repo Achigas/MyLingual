@@ -17,18 +17,15 @@
     <label for="password-signup">Password:</label>
     <input type="password" id="password-signup" />
   </div>
-  <div class="languages options row justify-content-around">
-      <label for="language-choice">Language:</label>
-      <select name="language-choice" id="language-dropdown" class="btn-choice col-10 col-md-8 col-xl-2 m-1"></select>
-       <option value="" disabled selected>Choose one.</option>
-        {{#each this}}
-        <section class="language">
-            <div class="meta">
-            <option value="{{language_name}}">{{language_name}}</option>  
-            </div>
-        </section>
-        {{/each}}
-  <div>
+   <div class='form-field'>
+    <label for='sizeFilter'>Language:</label>
+    <select id='sizeFilter' class='form-control'>
+      <option>Choose one.</option>
+      {{#each language_name}}
+      <option value="{{this}}">{{this.language_name}}</option>
+      {{/each}}
+    </select>
+  </div>
     <button type="submit">Sign Up</button>
   </div>
 </form>
