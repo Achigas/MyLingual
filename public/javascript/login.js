@@ -3,6 +3,23 @@ async function signupFormHandler(event) {
     //const id = document.querySelector('#id-signup').value.trim();
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
+
+function langDropDown() {
+    document.getElementById("langDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i=0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains ('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
     //const tag = document.querySelector('#tag-signup').value.trim();
 
     if (username && email) {
