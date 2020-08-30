@@ -26,4 +26,4 @@ Languages.init(
   },
 );
 
-module.exports = LAnguages;
+module.exports = Languages;
