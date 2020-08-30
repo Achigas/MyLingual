@@ -68,7 +68,9 @@ router.post('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);
     });
-});// POST /api/users
+});
+
+// POST /api/users
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
