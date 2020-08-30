@@ -22,7 +22,7 @@ Languages.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    languageName: 'languages',
+    modelName: 'languages',
   },
 );
 

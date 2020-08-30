@@ -30,7 +30,14 @@ User.init(
                 len: [10]
             }
         },
-        
+        language_id: {
+            type: DataTypes.INTEGER,
+            allowNull:false,
+            references: {
+                model: 'languages',
+                key: 'id'
+            }
+        }
     },
     {
         hooks: {
@@ -48,7 +55,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
     }
 );
 

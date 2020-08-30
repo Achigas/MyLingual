@@ -1,7 +1,6 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
-const Category = require('./Category');
 const Languages = require('./Languages');
 
 Post.belongsTo(User, {
@@ -24,16 +23,17 @@ Post.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-User.hasOne(Language)
-Tag.belongsToMany(Languages, {
-    through: Languages,
-    foreignKey: 'id',
+User.belongsTo(Languages, {
+    foreignKey: 'language_id'
+});
+
+Languages.hasMany(User, {
+    foreignKey: 'language_id'
 });
 
 module.exports = {
     User,
     Comment,
-    Post,
-    Category, 
+    Post, 
     Languages
 };

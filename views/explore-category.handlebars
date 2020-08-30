@@ -1,8 +1,8 @@
-<h2>{{this.language_name}}</h2>
+<h2>{{this.category_name}}</h2>
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-    {{> post-info post }}
+    {{> post-info post post.category_name }}
   </li>
   {{/each}}
 </ol>
