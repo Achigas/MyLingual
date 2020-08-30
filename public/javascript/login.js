@@ -2,7 +2,8 @@ async function signupFormHandler(event) {
     event.preventDefautl();
     //const id = document.querySelector('#id-signup').value.trim();
     const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
+    const password = document.querySelector()
+    //const email = document.querySelector('#email-signup').value.trim();
 
 // function langDropDown() {
 //     document.getElementById("langDropdown").classList.toggle("show");
@@ -22,13 +23,13 @@ async function signupFormHandler(event) {
 // }
     //const tag = document.querySelector('#tag-signup').value.trim();
 
-    if (username && email) {
+    if (username && password) {
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 //id,
                 username,
-                email
+                password
             }),
             headers: { 'Content-Type': 'application/json' }
         });
