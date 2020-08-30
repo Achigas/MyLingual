@@ -23,15 +23,19 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [10]
+            }
+        },
+        language_id: {
+            type: DataTypes.INTEGER,
+            allowNull:false,
+            references: {
+                model: 'languages',
+                key: 'id'
             }
         }
     },
@@ -51,7 +55,7 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'User'
+        modelName: 'user'
     }
 );
 
