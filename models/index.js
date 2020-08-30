@@ -27,7 +27,7 @@ User.belongsTo(Language, {
     foreignKey: 'language_id'
 });
 
-Language.hasMany(Users, {
+Languages.hasMany(Users, {
     foreignKey: 'language_id'
 });
 
