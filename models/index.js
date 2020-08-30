@@ -3,6 +3,10 @@ const Post = require('./Post');
 const Comment = require('./Comment');
 const Languages = require('./Languages');
 
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+});
+
 Post.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
