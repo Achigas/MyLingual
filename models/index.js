@@ -23,11 +23,11 @@ Post.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-User.belongsTo(Language, {
+User.belongsTo(Languages, {
     foreignKey: 'language_id'
 });
 
-Language.hasMany(Users, {
+Languages.hasMany(User, {
     foreignKey: 'language_id'
 });
 
