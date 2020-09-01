@@ -10,6 +10,10 @@
 <body>
   <div class="wrapper">
    <header>
+     <div>
+    <h1>MyLingual</h1>
+    <p class="tagline">Learn a language together!</p>
+    </div>
     <nav>
       {{#if loggedIn}}
       <a class="home" href="/">Homepage</a>
@@ -26,10 +30,6 @@
       <a class="btn-no-style" href="/login">Login</a>
       {{/if}}
     </nav>
-    <div>
-    <h1>MyLingual</h1>
-    <p class="tagline">Learn a language together!</p>
-    </div>
     </header>
      <main>
          {{{body}}}
