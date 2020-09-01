@@ -1,4 +1,3 @@
-  
 const seedUsers = require('./user-seeds');
 const seedLanguages = require('./language-seeds');
 const seedPosts= require('./post-seeds');
