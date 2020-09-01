@@ -2,6 +2,7 @@ async function signupFormHandler(event) {
     event.preventDefautl();
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+
     if (username && password) {
         const response = await fetch('/api/users', {
             method: 'post',
@@ -21,10 +22,6 @@ async function signupFormHandler(event) {
     }
 
 }
-
-//redirect to dashbaord 
-// document.location.replace('/dashboard')
-
 
 async function loginFormHandler(event) {
     event.preventDefault();
