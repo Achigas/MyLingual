@@ -2,7 +2,7 @@ async function signupFormHandler(event) {
     event.preventDefautl();
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    
+
     if (username && password) {
         const response = await fetch('/api/users', {
             method: 'post',
@@ -23,9 +23,6 @@ async function signupFormHandler(event) {
 
 }
 
-//redirect to dashbaord 
-// document.location.replace('/dashboard')
-
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 
 async function loginFormHandler(event) {
@@ -45,7 +42,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
