@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
             'id',
             'post',
             'title',
+            'post_url',
             'created_at'
         ],
         order: [['created_at', 'DESC']],
@@ -49,6 +50,7 @@ router.get('/:id', (req, res) => {
             'id',
             'post',
             'title',
+            'post_url',
             'created_at'
         ],
         include: [
@@ -85,6 +87,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
+        post_url,
         post: req.body.post,
         user_id: req.session.user_id
     })

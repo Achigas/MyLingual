@@ -4,49 +4,54 @@ const { Post, User, Comment } = require('../models');
 
 // route that renders the homepage
 router.get('/', (req, res) => {
-    console.log(req.session);
-    Post.findAll({
-      attributes: [
-        'id',
-        'post_url',
-        'title',
-        'created_at'
-      ],
-      include: [
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
-        {
-          model: User,
-          attributes: ['username']
-        }
-      ]
-    })
-    .then(dbPostData => {
-      const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('homepage', {
-        posts,
-        loggedIn: req.session.loggedIn
-      });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  res.render('homepage', {
+      id: 1,
+      post_url: 'https://handlebarsjs.com/guide/',
+      title: 'Handlebars Docs',
+      created_at: new Date(),
+      comments: [{}, {}],
+      user: {
+          username: 'test_user'
+      }
   });
-
-router.get('/home', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-    res.render('homepage');
 });
+// router.get('/', (req, res) => {
+//     console.log(req.session);
+//     Post.findAll({
+//       attributes: [
+//         'id',
+//         'post_url',
+//         'title',
+//         'created_at'
+//       ],
+//       include: [
+//         {
+//           model: Comment,
+//           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+//           include: {
+//             model: User,
+//             attributes: ['username']
+//           }
+//         },
+//         {
+//           model: User,
+//           attributes: ['username']
+//         }
+//       ]
+//     })
+//     .then(dbPostData => {
+//       const posts = dbPostData.map(post => post.get({ plain: true }));
+//       res.render('homepage', {
+//         posts,
+//         loggedIn: req.session.loggedIn
+//       });
+//     })
+//     .catch(err => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+//   });
+
 
 router.get('/dashboard', (req, res) => {
     if (req.session.loggedIn) {
@@ -56,13 +61,13 @@ router.get('/dashboard', (req, res) => {
     res.render('dashboard');
 });
 
-router.get('/meetpeople', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-    res.render('meet-people');
-});
+// router.get('/meetpeople', (req, res) => {
+//     if (req.session.loggedIn) {
+//       res.redirect('/');
+//       return;
+//     }
+//     res.render('meet-people');
+// });
 
 router.get('/explore', (req, res) => {
     if (req.session.loggedIn) {
@@ -71,15 +76,6 @@ router.get('/explore', (req, res) => {
     }
     res.render('explore');
   });
-
-
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-    res.render('signup');
-});
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

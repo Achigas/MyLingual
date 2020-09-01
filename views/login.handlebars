@@ -3,7 +3,7 @@
     <strong>LOGIN</strong>
   </div>
   <div>
-    <label for="email-login">Username:</label>
+    <label for="username-login">Username:</label>
     <input type="text" id="username-login" />
   </div>
   <div>
@@ -12,6 +12,30 @@
   </div>
   <div>
     <button type="submit">Login</button>
+  </div>
+</form>
+
+<form class="signup-form">
+  <strong>GET STARTED!</strong> 
+  <p>Enter username, password, and choose a study language below. </p>
+  <div class="signup">
+    <label for="username-signup">Username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="password-signup">Password: <br>(Password must be at least 15 characters.)</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div class='form-field'>
+      <label for='languageFilter'>Language: </label>
+      <select id='languageFilter' class='form-control'>
+        <option>Choose one.</option>
+        <option value="English">English</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Russian">Russian</option>
+      </select>
+    </div>
+    <button type="submit">Sign Up</button>
   </div>
 </form>
 
