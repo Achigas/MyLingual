@@ -4,42 +4,42 @@ const userData = [
     {
         username: 'QueenBey',
         password: '123456AB',
-        language: 4,
+        language_id: 4,
     },
     {
         username: 'Laura',
         password: 'Trees123',
-        language: 2,
+        language_id: 2,
     },
     {
         username: 'MrCheese',
         password: 'Gouda1454',
-        language: 1,
+        language_id: 1,
     },
     {
         username: 'ACDC',
         password: 'Trips2123',
-        language: 1,
+        language_id: 1,
     },
     {
         username: 'Karma',
         password: 'WatchMe',
-        language: 2,
+        language_id: 2,
     },
     {
         username: 'Learning212',
-        password: 2,
-        language: 4,
+        password: 'Shoot1234',
+        language_id: 4,
     },
     {
         username: 'Batman',
         password: 'Robin',
-        language: 3,
+        language_id: 3,
     },
     {
         username: 'Robin',
         password: 'Batman',
-        language: 2,
+        language_id: 2,
     },
 ];
 

@@ -3,15 +3,17 @@ const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//get all posts
+
+// get all posts
 router.get('/', (req, res) => {
     console.log('=============================');
     Post.findAll({
         attributes: [
             'id',
-            'post',
+            'post_url',
             'title',
-            'created_at',
+            'post',
+            'created_at'
         ],
         order: [['created_at', 'DESC']],
         include: [
@@ -48,7 +50,8 @@ router.get('/:id', (req, res) => {
             'id',
             'post',
             'title',
-            'created_at',
+            'post_url',
+            'created_at'
         ],
         include: [
             // include the Comment model to include comments and the authors of those comments
@@ -84,6 +87,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
+        post_url: req.body.post_url,
         post: req.body.post,
         user_id: req.session.user_id
     })
@@ -94,11 +98,13 @@ router.post('/', withAuth, (req, res) => {
     });
 });
 
-// update a post's title
+// update a post's title, link and content
 router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            post: req.body.post,
+            post_url: req.body.post_url
         },
         {
             where: {
@@ -118,5 +124,26 @@ router.put('/:id', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
+// delete a post
+router.delete('/:id', withAuth, (req, res) => {
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 
 module.exports = router;

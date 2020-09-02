@@ -27,27 +27,27 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [10]
+                len: [8]
             }
         },
-        language_id: {
-            type: DataTypes.INTEGER,
-            allowNull:false,
-            references: {
-                model: 'languages',
-                key: 'id'
-            }
-        }
+        // language_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: true,
+        //     references: {
+        //         model: 'languages',
+        //         key: 'id'
+        //     }
+        // }
     },
     {
         hooks: {
             async beforeCreate(newUserData) {
-                newUSerData.password = await bcrypt.hash(newUserData.password, 15);
+                newUserData.password = await bcrypt.hash(newUserData.password, 8);
                 return newUserData;
             },
 
             async beforeUpdate(updateUserData) {
-                updateUserData.password = await bcrypt.hash(updateUserData.password, 15);
+                updateUserData.password = await bcrypt.hash(updateUserData.password, 8);
                 return updateUserData;
             }
         },

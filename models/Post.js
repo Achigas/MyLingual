@@ -24,6 +24,13 @@ Post.init(
                 isURL: true
             }
         },
+        post: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {

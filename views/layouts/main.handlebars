@@ -10,6 +10,10 @@
 <body>
   <div class="wrapper">
    <header>
+     <div>
+    <h1>MyLingual</h1>
+    <p class="tagline">Learn a language together!</p>
+    </div>
     <nav>
       {{#if loggedIn}}
       <a class="home" href="/">Homepage</a>
@@ -19,17 +23,12 @@
       <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
        <a class="home" href="/">Home</a>
-      <a class="home" href="/dashboard">Dashboard</a>
-      <a class="home" href="/meetpeople">Meet People</a>
-      <a class="home" href="/explore">Explore</a>
-      <a class="home" href="/signup">Sign Up</a>
+      <a class="home" href="/login">Dashboard</a>
+      <a class="home" href="/login">Meet People</a>
+      <a class="home" href="/login">Explore</a>
       <a class="btn-no-style" href="/login">Login</a>
       {{/if}}
     </nav>
-    <div>
-    <h1>MyLingual</h1>
-    <p class="tagline">Learn a language together!</p>
-    </div>
     </header>
      <main>
          {{{body}}}

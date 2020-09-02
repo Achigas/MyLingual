@@ -24,6 +24,7 @@
         <option value="Advanced">Advanced</option>
       </select>
     </div>
+    <button type="submit" class="btn">Submit</button>
  </form>
 </section>
 
@@ -37,19 +38,19 @@
     </div>
      <div>
       <label for="post-url"><strong>Link:</strong></label>
-      <input name="post-url" type="text" value="{{post.post_url}}" />
+      <input name="post-url" id="post-url" />
     </div>
     <div>
       <label for="post"><strong>Content:</strong></label>
       <textarea id="post" name="post"></textarea>
     </div>
     <div class='form-field'>
-      <label for='languageFilter'>Category:</label>
-      <select id='languageFilter' class='form-control'>
+      <label for='categoryFilter'><strong>Category:</strong> </label>
+      <select id='categoryFilter' class='form-control'>
         <option>Choose one.</option>
-        {{#each category_name}}
-        <option value="{{this}}">{{this.category_name}}</option>
-        {{/each}}
+        <option value="Music">Music</option>
+        <option value="Literature">Literature</option>
+        <option value="Video">Video</option>
       </select>
     </div>
     <button type="submit" class="btn">Create</button>
