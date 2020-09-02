@@ -55,13 +55,13 @@ router.get('/', (req, res) => {
   });
 
 
-router.get('/dashboard', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/dashboard');
-      return;
-    }
-    res.render('dashboard');
-});
+// router.get('/dashboard', (req, res) => {
+//     if (req.session.loggedIn) {
+//       res.redirect('/dashboard');
+//       return;
+//     }
+//     res.render('dashboard');
+// });
 
 // router.get('/meetpeople', (req, res) => {
 //     if (req.session.loggedIn) {
@@ -71,13 +71,13 @@ router.get('/dashboard', (req, res) => {
 //     res.render('meet-people');
 // });
 
-router.get('/explore', (req, res) => {
-    if (req.session.loggedIn) {
-      res.redirect('/explore');
-      return;
-    }
-    res.render('login');
-  });
+// router.get('/explore', (req, res) => {
+//     if (req.session.loggedIn) {
+//       res.redirect('/explore');
+//       return;
+//     }
+//     res.render('login');
+//   });
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
