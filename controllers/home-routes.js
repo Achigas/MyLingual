@@ -2,21 +2,6 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
-// route that renders the homepage
-router.get('/', (req, res) => {
-  res.render('homepage', {
-      id: 1,
-      post_url: 'https://handlebarsjs.com/guide/',
-      title: 'Handlebars Docs',
-      created_at: new Date(),
-      comments: [{}, {}],
-      user: {
-          username: 'test_user'
-      }
-  });
-});
-
-
 router.get('/', (req, res) => {
     console.log(req.session);
     Post.findAll({
@@ -53,31 +38,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
   });
-
-
-// router.get('/dashboard', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/dashboard');
-//       return;
-//     }
-//     res.render('dashboard');
-// });
-
-// router.get('/meetpeople', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/');
-//       return;
-//     }
-//     res.render('meet-people');
-// });
-
-// router.get('/explore', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/explore');
-//       return;
-//     }
-//     res.render('login');
-//   });
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
