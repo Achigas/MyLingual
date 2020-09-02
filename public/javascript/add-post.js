@@ -8,7 +8,7 @@ async function newFormHandler(event) {
     const response = await fetch('/api/posts', {
         method: 'POST',
         body: JSON.stringify({
-            // title, 
+            title, 
             post_url,
             post
         }),
@@ -18,7 +18,7 @@ async function newFormHandler(event) {
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('dashboard');
     } else {
         alert(response.statusText);
     }
