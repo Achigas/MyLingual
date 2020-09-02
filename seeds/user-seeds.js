@@ -28,7 +28,7 @@ const userData = [
     },
     {
         username: 'Learning212',
-        password: 2,
+        password: 'Shoot1234',
         language_id: 4,
     },
     {

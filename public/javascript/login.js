@@ -15,9 +15,10 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            console.log(response)
+            document.location.replace('/dashboard');
         } else {
-            alert("Email and/or password incorrect!");
+            alert("Help!");
         }
     }
 }

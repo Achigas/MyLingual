@@ -27,12 +27,12 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [15]
+                len: [8]
             }
         },
         language_id: {
             type: DataTypes.INTEGER,
-            allowNull:false,
+            allowNull: true,
             references: {
                 model: 'languages',
                 key: 'id'
@@ -42,12 +42,12 @@ User.init(
     {
         hooks: {
             async beforeCreate(newUserData) {
-                newUSerData.password = await bcrypt.hash(newUserData.password, 15);
+                newUserData.password = await bcrypt.hash(newUserData.password, 8);
                 return newUserData;
             },
 
             async beforeUpdate(updateUserData) {
-                updateUserData.password = await bcrypt.hash(updateUserData.password, 15);
+                updateUserData.password = await bcrypt.hash(updateUserData.password, 8);
                 return updateUserData;
             }
         },
