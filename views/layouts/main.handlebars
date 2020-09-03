@@ -14,40 +14,23 @@
 
 <body>
   <div class="wrapper">
-   <header>
-    <nav>
+   <header >
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       {{#if loggedIn}}
-      <a class="home" href="/">Homepage</a>
-      <a class="home" href="/dashboard">Dashboard</a>
-      <a class="home" href="/meet-people">Meet People</a>
-      <a class="home" href="/explore">Explore</a>
+      <a class="navbar-brand" href="/">Homepage</a>
+      <a class="navbar-brand" href="/dashboard">Dashboard</a>
+      <a class="navbar-brand" href="/meet-people">Meet People</a>
+      <a class="navbar-brand" href="/explore">Explore</a>
       <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/">Home
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/dashboard">Dashboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/login">Meet People</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/login">Explore</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn-no-style" href="/login">Log In</a>
-                  </li>
-                </ul>
-              </div>
+      {{else}}    
+       <a class="navbar-brand" href="/">Homepage</a>
+       <a class="navbar-brand" href="/login">Dashboard</a>
+       <a class="navbar-brand" href="/login">Meet People</a>
+       <a class="navbar-brand" href="/login">Explore</a>
+       <a class="btn-no-style" href="/login">Login</a>
       {{/if}}
     </nav>
-
-    <header class="py-5 bg-image-full">
-        <img class="img-fluid d-block mx-auto" src="Mylingual1.png" alt="">
+        <img class="py-5 bg-image-full img-fluid d-block mx-auto" src="Mylingual1.png" alt="">
     </header>
 
     <!-- Content section -->
@@ -62,6 +45,7 @@
      <main>
          {{{body}}}
      </main>
+    </div>
   
   {{#if loggedIn}}
    <script src="/javascript/logout.js"></script>
@@ -72,6 +56,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  
 </body>
-
-
 </html>
