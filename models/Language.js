@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class Languages extends Model {}
+class Language extends Model {}
 
-Languages.init(
+Language.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -26,4 +26,4 @@ Languages.init(
   },
 );
 
-module.exports = Languages;
+module.exports = Language;
