@@ -46,6 +46,28 @@ router.get('/', (req, res) => {
     });
   });
 
+// route that renders meet people
+
+router.get('/meet-people', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/meet-people');
+    return;
+  }
+  res.render('meet-people');
+});
+
+// route that renders explore
+
+router.get('/explore', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/explore');
+    return;
+  }
+  res.render('explore');
+});
+
+// route that renders login
+
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
       res.redirect('/');
