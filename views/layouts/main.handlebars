@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>MyLingual</title>
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -22,11 +23,27 @@
       <a class="home" href="/explore">Explore</a>
       <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
-       <a class="home" href="/">Home</a>
-      <a class="home" href="/login">Dashboard</a>
-      <a class="home" href="/login">Meet People</a>
-      <a class="home" href="/login">Explore</a>
-      <a class="btn-no-style" href="/login">Login</a>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Meet People</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/login">Explore</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn-no-style" href="/login">Log In</a>
+                  </li>
+                </ul>
+              </div>
       {{/if}}
     </nav>
 
@@ -48,7 +65,7 @@
      </main>
   
   {{#if loggedIn}}
-   <!-- <script src="/javascript/logout.js"></script> -->
+   <script src="/javascript/logout.js"></script>
   {{/if}}
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
