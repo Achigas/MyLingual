@@ -42,7 +42,7 @@ async function signupFormHandler(event) {
 
         //check response status
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert("Email and/or password incorrect!");
         }
