@@ -4,13 +4,20 @@
     {{!-- <span>({{format_url post_url}})</span> --}}
   </div>
   <div class="meta">
+<<<<<<< HEAD
      {{!-- Posted by {{user.username}} on {{format_date created_at}} --}}
     ||
     <a href="/post/{{id}}">{{comments.length}} {{!-- {{format_plural "comment"  comments.length}}</a> --}}
+=======
+     Posted by {{user.username}} on {{created_at}}
+>>>>>>> 7a06ff6b93f71e6e5db1de4ce57617bf6a7a26fd
     ||
+    <a href="/post/{{id}}">{{comments.length}} comments </a>
+    {{!-- || --}}
     {{!-- {{category_name}} --}}
   </div>
   <div class="posttext">
     {{post}}
   </div>
 </article>
+

@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
+<<<<<<< HEAD
 // route that renders the homepage
 router.get('/', (req, res) => {
   res.render('homepage', {
@@ -9,6 +10,8 @@ router.get('/', (req, res) => {
 });
 
 
+=======
+>>>>>>> 7a06ff6b93f71e6e5db1de4ce57617bf6a7a26fd
 router.get('/', (req, res) => {
     console.log(req.session);
     Post.findAll({
@@ -45,31 +48,6 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
   });
-
-
-// router.get('/dashboard', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/dashboard');
-//       return;
-//     }
-//     res.render('dashboard');
-// });
-
-// router.get('/meetpeople', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/');
-//       return;
-//     }
-//     res.render('meet-people');
-// });
-
-// router.get('/explore', (req, res) => {
-//     if (req.session.loggedIn) {
-//       res.redirect('/explore');
-//       return;
-//     }
-//     res.render('login');
-//   });
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
