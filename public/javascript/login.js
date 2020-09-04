@@ -19,7 +19,7 @@ async function loginFormHandler(event) {
             
             document.location.replace('/dashboard');
         } else {
-            alert("Help!");
+            alert("Try Again!");
         }
     }
 }
