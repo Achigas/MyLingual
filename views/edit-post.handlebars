@@ -1,36 +1,58 @@
-<article>
-  <a href="/dashboard">&larr; Back to Dashboard</a>
-  <h2>Edit Post</h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <input name="post-url" type="text" value="{{post.post_url}}" />
+<div class="row justify-content-center">
+        <div class="card" style="width: 45rem;">
+            <h5 class="card-header">Enter Post</h5>
+            <div class="card-body">
+                <a href="/dashboard">&larr; Back to Dashboard</a>
+                
+
+                <form class="edit-post-form">
+        
+                    <div class="form-group">
+                        <label for="post-title"><strong>Title:</strong></label>
+                        <input type="text" class="form-control" id="post-title" value="{{post.title}}" placeholder="Enter Title">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="post-url"><strong>Link:</strong></label>
+                        <input name="post-url" class="form-control" id="post-url" value="{{post.post_url}}" placeholder="Enter URL">
+                    </div>
+
+                    <div>
+                        <small>Posted by you on {{ format_date post.created_at }}</small>
+                        ||
+                        <small><a href="/post/{{ post.id }}">{{ post.comments.length }} {{ format_plural "comment" post.comments.length }}</a></small>
+                    </div>
+
+
+                    <strong>Content:</strong>
+
+                        <div class="form-group">
+                            <textarea class="form-control" name="post" rows="3">{{post.post}}</textarea>
+                        </div>
+                    
+                
+                    <button type="submit" class="btn btn-secondary">Save Post</button>
+                    <button type="button" class="delete-post-btn btn btn-secondary">Delete Post</button>
+
+                </form>
+
+                <form class="comment-form">
+
+                    <strong>Comment:</strong>
+
+                        <div class="form-group">
+                            <textarea class="form-control" name="comment-body" id="comment-body" rows="3"></textarea>
+                        </div>
+                    <div>
+                        <button type="submit" class="btn btn-secondary">Add Comment</button>
+                    </div>
+                </form>
+                        {{#if post.comments.length}}
+                        {{> comments post.comments}}
+                        {{/if}}
+            </div>
+        </div>
     </div>
-    <div>
-      Posted by you on {{ format_date post.created_at }}
-      ||
-      <a href="/post/{{ post.id }}">{{ post.comments.length }} {{ format_plural "comment" post.comments.length }}</a>
-    </div>
-    <strong>Content:</strong>
-    <div>
-      <textarea name="post">{{ post.post }}</textarea>
-    </div>
-      <button type="submit">Save Post</button>
-      <button type="button" class="delete-post-btn">Delete Post</button>
-  </form>
-  <form class="comment-form">
-    <strong>Comment:</strong>
-    <div>
-      <textarea name="comment-body"></textarea>
-    </div>
-    <div>
-      <button type="submit">Add Comment</button>
-    </div>
-  </form>
-  {{#if post.comments.length}}
-    {{> comments post.comments}}
-  {{/if}}
-</article>
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>

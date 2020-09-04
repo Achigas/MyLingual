@@ -3,16 +3,26 @@
 {{> post-info post }}
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <strong>Comment:</strong>
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+ <div class="row justify-content-center">
+      <div class="card" style="width: 45rem;">
+            <h5 class="card-header">Create New Post</h5>
+            <div class="card-body">
+              <form class="comment-form">
+                
+                <div class="form-group">
+                    <label for="comment-body"><strong>Comment:</strong></label>
+                    <textarea class="form-control" name="comment-body" id="comment-body" rows="3"></textarea>
+                </div>
+            
+                <div>
+                  <button class="btn btn-secondary" type="submit">Add Comment</button>
+                </div>
 
-  <div>
-    <button type="submit">Add Comment</button>
+              </form>
+            </div>
+      </div>
   </div>
-</form>
+ 
 {{/if}}
 
 {{#if loggedIn}}
