@@ -28,21 +28,18 @@
             </div>
 
             {{!-- <br> --}}
-
-            <div class="col-lg-5">
-                <label for='languageFilter'>Language</label>
             
-                  <div class="dropdown bg-light">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Choose a language you'd like to learn...
-                    </button>
-                    <div class="dropdown-menu" id="languageFilter" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button">English</button>
-                      <button class="dropdown-item" type="button">Spanish</button>
-                      <button class="dropdown-item" type="button">Russian</button>
-                    </div>
+                  <div class= "col-lg-10 form-field">
+                    <label for="learning-language"><strong>Learning Language:</strong></label>
+                    <select id="languageFilter" class="form-control">
+                        <option selected="true" disabled="disabled">Choose your primary language</option>
+                        <option class="dropdown-item" value="free">English</option> 
+                        <option class="dropdown-item" value="basic">Spanish</option> 
+                        <option class="dropdown-item" value="premium">Russian</option> 
+                    </select>
                   </div>
-            </div>
+
+            
 
             <br> 
             <div class="form-group container">
