@@ -1,10 +1,11 @@
 <article class="post">
   <div class="title">
+    {{!-- {{#filter posts user user.language_id = session.language_id}} --}}
     <a class= "maintitle" href="{{post_url}}" target="_blank">{{title}}</a>
     {{!-- <span>({{format_url post_url}})</span> --}}
   </div>
   <div class="meta">
-      Posted by {{user.username}} on {{format_date created_at}}
+      Posted by {{user.username}} in {{user.language.language_name}} on {{format_date created_at}}
     ||
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     {{!-- || --}}

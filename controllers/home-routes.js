@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Post, User, Comment } = require('../models');
+const { Post, User, Comment, Language } = require('../models');
 
 // // route that renders the homepage
 // router.get('/', (req, res) => {
@@ -8,6 +8,43 @@ const { Post, User, Comment } = require('../models');
 //   });
 // });
 
+// router.get('/', (req, res) => {
+//     User.findAll(
+//       {
+//         where: {
+//           language_id: 2
+//         },
+//         include: [
+//           {
+//             model: Post, 
+//             attributes: ['id', 'post_url', 'title', 'created_at'],
+//             include: {
+//               model: Comment,
+//               attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'], 
+//             }
+//           },
+//           {
+//             model: Comment,
+//             attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+//             include: {
+//               model: User,
+//               attributes: ['username']
+//             }
+//           }
+//         ]
+//       })
+//       .then(dbPostData => {
+//         const posts = dbPostData.map(post => post.get({ plain: true }));
+//         res.render('homepage', {
+//           posts,
+//           loggedIn: req.session.loggedIn
+//         });
+//       })
+//       .catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//       })
+// });
 
 router.get('/', (req, res) => {
     console.log(req.session);
@@ -24,12 +61,16 @@ router.get('/', (req, res) => {
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
-            attributes: ['username']
+            attributes: ['username', 'language_id']
           }
         },
         {
           model: User,
-          attributes: ['username']
+          attributes: ['username', 'language_id'],
+            include: {
+              model: Language,
+              attributes: ['language_name']
+            }
         }
       ]
     })
