@@ -1,55 +1,25 @@
-
-  <div class="row justify-content-center">
-    <div class="card" style="width: 50rem;">
-      <div class="card-body">
-
-        <form class="login-form">
-          <h1 class="font-italic text-center">Sign In</h1>
-
-          <div class="row justify-content-center">
-
-            <div class="form-group signs col-lg-6">
-              <label for="username-login">Username</label>
-              <input type="text" class="form-control" id="username-login" placeholder="Enter username">
-            </div>
-
-            <br>
-
-            <div class="form-group col-lg-6">
-              <label for="password-login">Password</label>
-              <input type="password" class="form-control" id="password-login" placeholder="Password">
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-warning">Submit</button>
-
-          </div>
-          
-        </form>
-        
-      </div>
+  <section class="py-5">
+    <div class="container">
+      <h1>Let's learn together!</h1>
+      <p class="lead">The place for people learning the same language to meet and share. All levels welcome!</p>
     </div>
-  </div>
-
+  </section> 
     
 
-    <br>
-    <br>
-    
   <div class="row justify-content-center">
     <div class="card" style="width: 50rem;">
       <div class="card-body">
         
         <form class="signup-form">
           <h1 class="font-italic text-center">Don't have an account yet? Sign up now!</h1> 
-          <p class="text-center">Fill out the form below to get started.</p>
-          
+          <p class="text-center">Fill out the form below to get started.<br> Already a member? <a href="#sign-in">Sign in!</a></p>
            
             <div class="form-group signup col-lg-6">
               <label for="username-signup">Username</label>
               <input type="text" class="form-control" id="username-signup" placeholder="Enter username">
             </div>
 
-            <br>
+            {{!-- <br> --}}
 
             <div class="form-group signup col-lg-6">
               <label for="password-signup">Password</label>
@@ -57,7 +27,7 @@
               <small class="form-text text-muted">Password must be at least 8 characters.</small>
             </div>
 
-            <br>
+            {{!-- <br> --}}
 
             <div class="col-lg-5">
                 <label for='languageFilter'>Language</label>
@@ -92,7 +62,44 @@
   </div>
 
   <br>
-  <br>
+  <br>  
+  
+  <div class="row justify-content-center">
+    <div class="card" style="width: 50rem;">
+      <div class="card-body">
+
+        <form class="login-form">
+          <h1 id="sign-in" class="font-italic text-center">Sign In</h1>
+
+          <div class="row justify-content-center">
+
+            <div class="form-group signs col-lg-6">
+              <label for="username-login">Username</label>
+              <input type="text" class="form-control" id="username-login" placeholder="Enter username">
+            </div>
+
+            <br>
+
+            <div class="form-group col-lg-6">
+              <label for="password-login">Password</label>
+              <input type="password" class="form-control" id="password-login" placeholder="Password">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-warning">Submit</button>
+
+          </div>
+          
+        </form>
+        
+      </div>
+    </div>
+  </div>
+
+    
+
+    <br>
+    <br>
+    
 
 <script src="/javascript/login.js"></script>
 

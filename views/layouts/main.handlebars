@@ -21,41 +21,33 @@
       <a class="navbar-brand" href="/dashboard">Dashboard</a>
       <a class="navbar-brand" href="/meet-people">Meet People</a>
       <a class="navbar-brand" href="/explore">Explore</a>
-      <button id="logout" class="btn-no-style">Logout</button>
+      <button id="logout" class="btn-no-style">Sign Out</button>
       {{else}}    
        <a class="navbar-brand" href="/">Homepage</a>
        <a class="navbar-brand" href="/login">Dashboard</a>
        <a class="navbar-brand" href="/login">Meet People</a>
        <a class="navbar-brand" href="/login">Explore</a>
-       <a class="btn-no-style" href="/login">Login</a>
+       <a class="btn-no-style" href="/login">Sign In</a>
       {{/if}}
     </nav>
       <img class="py-5 bg-image-full img-fluid d-block mx-auto" src="./images/Mylingual1.png" alt="">
     </header>
 
     <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Let's learn together!</h1>
-      <p class="lead">With this application, people are able to learn a language together.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis.</p>
-    </div>
-  </section> 
-    
      <main>
          {{{body}}}
      </main>
     </div>
 
-  <div class="card">
-    <h6 class="card-header">MyLingual</h6>
-    <div class="card-body">
-      <h5 class="card-title">MyLingual Company, Inc</h5>
-      <small class="form-text text-muted">© 2020 MyLingual Company, Inc. All rights reserved. </small>
-      <br>
-      <a href="/" class="btn btn-primary btn-warning">Contact Us</a>
-    </div>
-  </div>
+ 
+    <footer>
+      <div class="content-center">
+        <h6>MyLingual Company,Inc <br><small class="form-text text-muted">© 2020 MyLingual, Inc. All rights reserved. </small></h6>
+         <br>
+        <a href="/" class="btn btn-primary btn-warning">Contact Us</a>
+      </div>
+    </footer>
+
   
   {{#if loggedIn}}
    <script src="/javascript/logout.js"></script>
