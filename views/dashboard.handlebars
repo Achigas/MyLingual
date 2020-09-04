@@ -1,69 +1,198 @@
-<div>
-  <h1>Your Dashboard</h1>
- </div> 
-
-<section>
- <div>
-     <h3>Upload Photo</h3>
- </div>
- <form class="student-info-form">
     <div>
-      <label for="primary-language"><strong>Primary Language:</strong></label>
-      <input type="text" name="primary-language" id="primary-language">
-    </div>
-    <div>
-      <label for="learning-language"><strong>Learning Language:</strong></label>
-       <input type="text" name="learning-language" id="learning-language">
-    </div>
-     <div class='form-field'>
-      <label for='levelFilter'><strong>Level:</strong> </label>
-      <select id='levelFilter' class='form-control'>
-        <option>Choose one.</option>
-        <option value="Beginner">Beginner</option>
-        <option value="Intermediate">Intermediate</option>
-        <option value="Advanced">Advanced</option>
-      </select>
-    </div>
-    <button type="submit" class="btn">Submit</button>
- </form>
-</section>
+        <h1 class="text-center font-italic">Your Dashboard</h1>
+    </div> 
 
-<section>
-  <h2>Create New Post</h2>
+<div class="row justify-content-center">
+    <div class="card" style="width: 45rem;">
+        <h5 class="card-header">Choose an avatar:</h5>
+        <div class="card-body">
+            
+            <div class="row">
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="guy1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title"><strong>Title:</strong></label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-     <div>
-      <label for="post-url"><strong>Link:</strong></label>
-      <input name="post-url" id="post-url" />
-    </div>
-    <div>
-      <label for="post"><strong>Content:</strong></label>
-      <textarea id="post" name="post"></textarea>
-    </div>
-    <div class='form-field'>
-      <label for='categoryFilter'><strong>Category:</strong> </label>
-      <select id='categoryFilter' class='form-control'>
-        <option>Choose one.</option>
-        <option value="Music">Music</option>
-        <option value="Literature">Literature</option>
-        <option value="Video">Video</option>
-      </select>
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="lady1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
+              
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="lady3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
 
+                <!-- Force next columns to break to new line at md breakpoint and up -->
+                <div class="w-100 d-none d-md-block"></div>
+              
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="guy2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
+
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="lady2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
+
+                <div class="col-6 col-sm-4 input-group">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">
+                    <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                    </div>
+                    <img src="guy3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
+                </div>
+        </div>
+        
+
+            <br> 
+                
+                <div class="form-group container">
+                <div class="text-center">
+                <button type="submit" class="row btn btn-primary btn-warning ">Choose</button>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+            
+<br>
+
+
+<div class="row justify-content-center"> 
+    <div class="card" style="width: 45rem;">
+        <h5 class="card-header">Language</h5>
+        <div class="card-body">
+       
+            <form class="student-info-form">
+                <div class="col-lg-5">
+                    <label for="primary-language"><strong>Primary Language:</strong></label>
+                    <div class="dropdown bg-light">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose your primary language...
+                        </button>
+                        <div class="dropdown-menu" id="languageFilter" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">English</button>
+                        <button class="dropdown-item" type="button">Spanish</button>
+                        <button class="dropdown-item" type="button">Russian</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <label for="learning-language"><strong>Learning Language:</strong></label>
+                    <div class="dropdown bg-light">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Choose a language you'd like to learn...
+                        </button>
+                        <div class="dropdown-menu" id="languageFilter" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">English</button>
+                        <button class="dropdown-item" type="button">Spanish</button>
+                        <button class="dropdown-item" type="button">Russian</button>
+                        </div>
+                    </div>
+                </div>
+                <div class= "col-lg-5 form-fiel">
+                    <label for='levelFilter'><strong>Level:</strong> </label>
+                    <select id='levelFilter' class='form-control'>
+                    <option>Choose one</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+                <br> 
+                    
+                <div class="form-group container">
+                    <div class="text-center">
+                        <button type="submit" class="row btn btn-primary btn-warning ">Sign Up</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>   
+      
+<div class="row justify-content-center">
+    <div class="card" style="width: 45rem;">
+        <h5 class="card-header">Create New Post</h5>
+        <div class="card-body">
+      
+            <form class="new-post-form">
+        
+            <div class="form-group">
+                <label for="post-title"><strong>Title:</strong></label>
+                <input type="text" class="form-control" id="post-title" placeholder="Enter Title">
+            </div>
+
+            <div class="form-group">
+                <label for="post-url"><strong>Link:</strong></label>
+                <input name="post-url" class="form-control" id="post-url" placeholder="Enter URL">
+            </div>
+
+            <div class="form-group">
+                <label for="post"><strong>Content:</strong></label>
+                <input id="post" class="form-control" name="post" placeholder="Enter text here">
+            </div>
+
+            <div class='form-field'>
+                <label for='categoryFilter'><strong>Category:</strong> </label>
+                <select id='categoryFilter' class='form-control'>
+                <option>Choose one.</option>
+                <option value="Music">Music</option>
+                <option value="Literature">Literature</option>
+                <option value="Video">Video</option>
+                </select>
+            </div>
+            
+            <br>
+
+            <div class="form-group container">
+                <div class="text-center">
+                    <button type="submit" class="row btn btn-primary btn-warning ">Create Post</button>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<br>  
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
-     <strong> <a href="/post/{{id}}" target="_blank">{{title}}</a> </strong><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+     <strong> <a href="{{post_url}}" target="_blank">{{title}}</a> </strong>
+      |
+     <a href="/dashboard/edit/{{post.id}}"  >Edit post</a>
     </li>
     {{/each}}
   </ol>
@@ -71,3 +200,27 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
+
+<div class="row justify-content-center">
+    <div class="card" style="width: 45rem;">
+        <h5 class="card-header">Previous Posts</h5>
+        <div class="card-body">      
+      <!--{{#if posts.length}}-->
+      
+        
+            <ol>
+            <!--{{#each posts as |post|}}-->
+            <li>
+            <h6><strong> <a href="/post/{{id}}" target="_blank">{{title}}</a> </strong></h6>
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            </li>
+            <!--{{/each}}-->
+            </ol>
+      
+      <!--{{/if}}-->
+        </div>
+    </div>
+</div>   
+
+<br>  
+<br>  
