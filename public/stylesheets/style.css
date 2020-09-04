@@ -230,6 +230,22 @@
 body {
     padding-top: 56px;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgb(247, 247, 247);
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: center;
+}
+
+
   
 
   
