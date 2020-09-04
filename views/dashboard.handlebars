@@ -157,7 +157,7 @@
 
             <div class="form-group">
                 <label for="post"><strong>Content:</strong></label>
-                <input id="post" class="form-control" name="post" placeholder="Enter text here">
+                <textarea id="post" class="form-control" name="post" placeholder="Enter text here"></textarea>
             </div>
 
             <div class='form-field'>
@@ -184,24 +184,32 @@
 </div>
 
 <br>  
+<div class="row justify-content-center">
+    <div class="card" style="width: 45rem;">
+        <h5 class="card-header">Previous Posts</h5>
+        <div class="card-body">    
 {{#if posts.length}}
 <section>
-  <h2>Your Posts</h2>
   <ol>
     {{#each posts as |post|}}
     <li>
-     <strong> <a href="{{post_url}}" target="_blank">{{title}}</a> </strong>
-      |
-     <a href="/dashboard/edit/{{post.id}}"  >Edit post</a>
+     <h6><strong> <a href="/post/{{post_url}}" target="_blank">{{title}}</a> </strong></h6>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
+       </div>
+    </div>
+</div>   
+
+<br>  
+<br> 
 
 <script src="/javascript/add-post.js"></script>
 
-<div class="row justify-content-center">
+{{!-- <div class="row justify-content-center">
     <div class="card" style="width: 45rem;">
         <h5 class="card-header">Previous Posts</h5>
         <div class="card-body">      
@@ -223,4 +231,4 @@
 </div>   
 
 <br>  
-<br>  
+<br>   --}}
