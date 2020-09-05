@@ -58,6 +58,10 @@
     overflow: visible;
   }
   
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1.70rem;
+  }
   
   .post {
     margin-bottom: 2%;
