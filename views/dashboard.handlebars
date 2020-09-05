@@ -187,8 +187,8 @@
   <ol>
     {{#each posts as |post|}}
     <li>
-     <h6><strong> <a href="/post/{{post_url}}" target="_blank">{{title}}</a> </strong></h6>
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        <h6><strong> <a href="/post/{{post_url}}" target="_blank">{title}}</a> </strong></h6>
+        <small><a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a></small>
     </li>
     {{/each}}
   </ol>

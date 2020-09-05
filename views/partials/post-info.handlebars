@@ -3,12 +3,13 @@
     <a class= "maintitle" href="{{post_url}}" target="_blank">{{title}}</a>
   </div>
   <div class="meta">
-      Posted by {{user.username}} on {{format_date created_at}}
+      <small>Posted by {{user.username}} on {{format_date created_at}}
     ||
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </small>
   </div>
   <div class="posttext">
-    {{post}}
+    <i>{{post}}</i>
   </div>
 </article>
 
