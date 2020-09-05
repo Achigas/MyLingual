@@ -1,6 +1,6 @@
     <div>
         <h1 class="text-center font-italic">Let's learn together!</h1>
-        <p class="lead">MyLingual is a community for people learning the same language to meet and share. All levels welcome!</p>
+        <p class="text-center lead">MyLingual is a community for people learning the same language to meet and share. All levels welcome!</p>
       </div> 
     
     <br>
@@ -10,13 +10,13 @@
         <h5 class="card-header">See what everyone is sharing!</h5>
         <div class="card-body">
 
-          <ol class="post-list">
+          <ul class="post-list">
             {{#each posts as |post|}}
             <li>
               {{> post-info post }}
             </li>
             {{/each}}
-          </ol>
+          </ul>
 
       </div>
     </div>
