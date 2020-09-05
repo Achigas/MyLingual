@@ -21,8 +21,13 @@ async function newFormHandler(event) {
     if (response.ok) {
         document.location.replace('dashboard');
     } else {
-        alert(response.statusText);
+        alert("Please add a post!");
     }
 }
+// ROCHELLE'S NOTE FOR DROPDOWNS
+//$(".dropdown-menu li a").click(function() {
+    //$(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+    //$(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+//});
 
 document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
