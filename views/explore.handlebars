@@ -1,17 +1,21 @@
- <div>
-  <h1>Explore</h1>
- </div> 
- 
-  <form class="explore-form"></form>
-    <div class='form-field'>
-      <label for='categoryFilter'><strong>Choose by category:</strong> </label>
-      <select id='categoryFilter' class='form-control'>
-        <option>Choose one.</option>
-        <option value="Music">Music</option>
-        <option value="Literature">Literature</option>
-        <option value="Video">Video</option>
-      </select>
-      <button type="submit" class="btn">Search</button>
+  <div>
+        <h1 class="text-center font-italic">Explore</h1>
+          <p class="lead">See new posts and content.</p>
+    </div> 
+<br>
+ <div class="row justify-content-center">
+    <div class="card" style="width: 55rem;">
+        <h5 class="card-header">Start exploring!</h5>
+        <div class="card-body">
+
+          <ol class="post-list">
+            {{#each posts as |post|}}
+            <li>
+              {{> post-info post }}
+            </li>
+            {{/each}}
+          </ol>
+
       </div>
-  </form>
     </div>
+  </div>

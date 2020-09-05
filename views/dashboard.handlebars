@@ -1,10 +1,11 @@
     <div>
         <h1 class="text-center font-italic">Your Dashboard</h1>
+          <p class="lead">Choose your avatar, language and level, and start sharing posts.</p>
     </div> 
-
+ <br>
 <div class="row justify-content-center">
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Choose an avatar:</h5>
+        <h5 class="card-header">Avatar:</h5>
         <div class="card-body">
             
             <div class="row">
@@ -81,23 +82,23 @@
 
 <div class="row justify-content-center"> 
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Language</h5>
+        <h5 class="card-header">Language:</h5>
         <div class="card-body">
        
             <form class="student-info-form">
-
-
-                <div class= "col-lg-6 form-field">
+                <div class="col-lg-7 form-field">
                     <label for="primary-language"><strong>Primary Language:</strong></label>
-                    <select id="languageFilter" class="form-control">
-                        <option selected="true" disabled="disabled">Choose your primary language</option>
-                        <option class="dropdown-item" value="free">English</option> 
-                        <option class="dropdown-item" value="basic">Spanish</option> 
-                        <option class="dropdown-item" value="premium">Russian</option> 
-                    </select>
+                    <div class="dropdown bg-light">
+                        <select id="languageFilter" class="form-control">
+                            <option selected="true" disabled="disabled">Choose your primary language</option>
+                            <option class="dropdown-item" value="free">English</option> 
+                            <option class="dropdown-item" value="basic">Spanish</option> 
+                            <option class="dropdown-item" value="premium">Russian</option> 
+                        </select>
+                    </div>
                 </div>
 
-                <div class= "col-lg-6 form-field">
+                 <div class= "col-lg-7 form-field">
                     <label for="learning-language"><strong>Learning Language:</strong></label>
                     <select id="languageFilter" class="form-control">
                         <option selected="true" disabled="disabled">Choose your primary language</option>
@@ -120,7 +121,7 @@
                     
                 <div class="form-group container">
                     <div class="text-center">
-                        <button type="submit" class="row btn btn-primary btn-warning ">Sign Up</button>
+                        <button type="submit" class="row btn btn-primary btn-warning ">Submit</button>
                     </div>
                 </div>
 
@@ -133,7 +134,7 @@
       
 <div class="row justify-content-center">
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Create New Post</h5>
+        <h5 class="card-header">Create New Post:</h5>
         <div class="card-body">
       
             <form class="new-post-form">
@@ -153,7 +154,7 @@
                 <textarea id="post" class="form-control" name="post" placeholder="Enter text here"></textarea>
             </div>
 
-            <div class='form-field'>
+            {{!-- <div class='form-field'>
                 <label for='categoryFilter'><strong>Category:</strong> </label>
                 <select id='categoryFilter' class='form-control'>
                 <option>Choose one.</option>
@@ -161,7 +162,7 @@
                 <option value="Literature">Literature</option>
                 <option value="Video">Video</option>
                 </select>
-            </div>
+            </div> --}}
             
             <br>
 
@@ -202,26 +203,3 @@
 
 <script src="/javascript/add-post.js"></script>
 
-{{!-- <div class="row justify-content-center">
-    <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Previous Posts</h5>
-        <div class="card-body">      
-      <!--{{#if posts.length}}-->
-      
-        
-            <ol>
-            <!--{{#each posts as |post|}}-->
-            <li>
-            <h6><strong> <a href="/post/{{id}}" target="_blank">{{title}}</a> </strong></h6>
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-            </li>
-            <!--{{/each}}-->
-            </ol>
-      
-      <!--{{/if}}-->
-        </div>
-    </div>
-</div>   
-
-<br>  
-<br>   --}}
