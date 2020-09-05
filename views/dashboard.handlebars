@@ -1,14 +1,15 @@
     <div>
         <h1 class="text-center font-italic">Your Dashboard</h1>
-          <p class="lead">Choose your avatar, language and level, and start sharing posts.</p>
+          <p class="text-center lead">Choose your avatar, languages and level, and start sharing posts.</p>
     </div> 
- <br>
-<div class="row justify-content-center">
+
+<br>
+<div class="row justify-content-center"> 
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Avatar:</h5>
+        <h5 class="card-header">User Info</h5>
         <div class="card-body">
-            
-            <div class="row">
+             <label class="avatar-title" for="avatar"><strong>Avatar:</strong></label>
+            <div class="row avatars">
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -65,26 +66,8 @@
                     </div>
                     <img src="./images/guy3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-        </div>
-        
-        {{!-- <br> 
-                
-                <div class="form-group container">
-                    <div class="text-center">
-                    <button type="submit" class="row btn btn-primary btn-warning ">Choose</button>
-                    </div>
-                </div> --}}
-        </div>
-    </div>
-</div>
-            
-<br>
-
-<div class="row justify-content-center"> 
-    <div class="card" style="width: 45rem;">
-        <h5 class="card-header">User Info:</h5>
-        <div class="card-body">
-       
+         </div>
+          <br>
             <form class="student-info-form">
                 <div class="col-lg-7 form-field">
                     <label for="primary-language"><strong>Primary Language:</strong></label>
@@ -98,13 +81,13 @@
                 <br>
                 <div class= "col-lg-7 form-field">
                     <label for='levelFilter'><strong>Level:</strong> </label>
-                    <input type="text" class="form-control" id="level-language" placeholder="Enter Level (Beginner, Intermediate, Advanced)">
+                    <input type="text" class="form-control" id="level-language" placeholder="Beginner, Intermediate, Advanced">
                 </div>
                 
                 <br>    
                 <div class="form-group container">
                     <div class="text-center">
-                        <button type="submit" class="row btn btn-primary btn-warning ">Submit</button>
+                        <button type="submit" class="row btn btn-primary btn-warning ">Create Profile</button>
                     </div>
                 </div>
 
@@ -117,7 +100,7 @@
       
 <div class="row justify-content-center">
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Create New Post:</h5>
+        <h5 class="card-header">Create New Post</h5>
         <div class="card-body">
       
             <form class="new-post-form">
@@ -134,7 +117,7 @@
 
             <div class="form-group">
                 <label for="post"><strong>Content:</strong></label>
-                <textarea id="post" class="form-control" name="post" placeholder="Enter text here"></textarea>
+                <textarea id="post" class="form-control" name="post" placeholder="Enter Text"></textarea>
             </div>
 
             {{!-- <div class='form-field'>

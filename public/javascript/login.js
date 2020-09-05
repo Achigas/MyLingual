@@ -46,9 +46,9 @@ async function signupFormHandler(event) {
 
         //check response status
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('#sign-in');
         } else {
-            alert("Email and/or password incorrect!");
+            alert("Make sure all information is entered.");
         }
     }
 

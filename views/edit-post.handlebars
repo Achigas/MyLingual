@@ -1,9 +1,14 @@
-  <a href="/dashboard">&larr; Back to Dashboard</a>
+    <a href="/dashboard">&larr; Back to Dashboard</a>
+
+     <div>
+        <h1 class="text-center font-italic">Edit Post</h1>
+          <p class="text-center lead">Make changes to posts here.</p>
+    </div> 
+    
   <div class="row justify-content-center">
         <div class="card" style="width: 45rem;">
             <h5 class="card-header">Edit Post</h5>
             <div class="card-body">
- 
   <form class="edit-post-form">
    <div class="form-group">
       <label for="post-title"><strong>Title:</strong></label>
@@ -26,11 +31,11 @@
       <button type="submit" class="btn btn-primary btn-warning">Save Post</button>
       <button type="button" class="delete-post-btn  btn btn-primary btn-warning">Delete Post</button>
   </form>
-  <br><br>
+  <br>
   <form class="comment-form">
     <strong>Comment:</strong>
      <div class="form-group">
-      <textarea class="form-control" name="comment-body" id="comment-body" rows="3"></textarea>
+      <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Explain Edit Here"></textarea>
     </div>
     <div>
       <button type="submit" class="btn btn-primary btn-warning">Add Comment</button>
@@ -39,7 +44,7 @@
 
 <div class="row justify-content-center">
     <div class="card" style="width: 55rem;">
-        <h6 class="card-header"><strong>Comments:</strong></h6>
+        <h6 class="card-header"><strong>Comments</strong></h6>
         <div class="card-body comments">
 
                {{#if post.comments.length}}
