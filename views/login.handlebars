@@ -1,25 +1,25 @@
-  <section class="py-5">
-    <div class="container">
-      <h1>Let's learn together!</h1>
-      <p class="lead">The place for people learning the same language to meet and share. All levels welcome!</p>
-    </div>
-  </section> 
+     <div>
+        <h1 class="text-center font-italic">Let's learn together!</h1>
+        <p class="lead">MyLingual is a community for people learning the same language to meet and share. All levels welcome!</p>
+      </div> 
     
+    <br>
 
   <div class="row justify-content-center">
     <div class="card" style="width: 50rem;">
       <div class="card-body">
         
         <form class="signup-form">
-          <h1 class="font-italic text-center">Don't have an account yet? Sign up now!</h1> 
+          <h3 class="font-italic text-center">Don't have an account yet? Sign up now!</h3> 
           <p class="text-center">Fill out the form below to get started.<br> Already a member? <a href="#sign-in">Sign in!</a></p>
+
            
             <div class="form-group signup col-lg-6">
               <label for="username-signup">Username</label>
               <input type="text" class="form-control" id="username-signup" placeholder="Enter username">
             </div>
 
-            {{!-- <br> --}}
+           
 
             <div class="form-group signup col-lg-6">
               <label for="password-signup">Password</label>
@@ -27,23 +27,17 @@
               <small class="form-text text-muted">Password must be at least 8 characters.</small>
             </div>
 
-            {{!-- <br> --}}
+         
 
-            <div class="col-lg-5">
-                <label for='languageFilter'>Language</label>
-            
-                  <div class="dropdown bg-light">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Choose a language you'd like to learn...
-                    </button>
-                    <div class="dropdown-menu" id="languageFilter" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button">English</button>
-                      <button class="dropdown-item" type="button">Spanish</button>
-                      <button class="dropdown-item" type="button">Russian</button>
-                    </div>
+               <div class= "col-lg-5 form-field">
+                    <label for="learning-language"><strong>Learning Language:</strong></label>
+                    <select id="languageFilter" class="form-control">
+                        <option selected="true" disabled="disabled">Choose your primary language</option>
+                        <option class="dropdown-item" value="free">English</option> 
+                        <option class="dropdown-item" value="basic">Spanish</option> 
+                        <option class="dropdown-item" value="premium">Russian</option> 
+                    </select>
                   </div>
-            </div>
-
             <br> 
             <div class="form-group container">
             <div class="text-center">
@@ -69,7 +63,7 @@
       <div class="card-body">
 
         <form class="login-form">
-          <h1 id="sign-in" class="font-italic text-center">Sign In</h1>
+          <h3 id="sign-in" class="font-italic text-center">Sign In</h3>
 
           <div class="row justify-content-center">
 
@@ -85,7 +79,7 @@
               <input type="password" class="form-control" id="password-login" placeholder="Password">
             </div>
 
-            <button type="submit" class="btn btn-primary btn-warning">Submit</button>
+            <button type="submit" class="btn btn-primary btn-warning">Sign In</button>
 
           </div>
           

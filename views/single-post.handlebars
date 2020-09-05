@@ -1,23 +1,52 @@
 <a href="/">&larr; Back to Homepage</a>
 
-{{> post-info post }}
+<br> <br>
+
+<div class="row justify-content-center">
+    <div class="card" style="width: 55rem;">
+        <h5 class="card-header">Leave comments below.</h5>
+        <div class="card-body">
+         {{> post-info post }}
+       </div>
+    </div>
+ </div>
+
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <strong>Comment:</strong>
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
 
-  <div>
-    <button type="submit">Add Comment</button>
+<div class="row justify-content-center">
+    <div class="card" style="width: 55rem;">
+        <div class="card-body">
+              <form class="comment-form">
+                
+                <div class="form-group">
+                    <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Enter comment."></textarea>
+                </div>
+            
+                <div>
+                  <button class="btn btn-primary btn-warning" type="submit">Add Comment</button>
+                </div>
+
+              </form>
+            </div>
+      </div>
   </div>
-</form>
 {{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
 
+<br><br>
 
-{{> comments post.comments}}
+
+<div class="row justify-content-center">
+    <div class="card" style="width: 55rem;">
+        <h6 class="card-header"><strong>Comments:</strong></h6>
+        <div class="card-body comments">
+
+              {{> comments post.comments }}
+          
+      </div>
+    </div>
+  </div>
