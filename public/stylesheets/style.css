@@ -36,6 +36,15 @@
     flex-direction: column;
   }
   
+  .btn-no-style{
+    font-size: 20px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    color: #333;
+    border: 2px solid;
+    font-weight: bold;
+  }
+
   main {
     flex: 1;
     padding: 2% 4%;
