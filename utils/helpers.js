@@ -18,8 +18,14 @@ module.exports = {
       }
       return word;
     },
-    isCurrentLanguage: () => {
-      if (language_id === user.language_id)
+    isCurrentLanguage: (language_id, userlanguage_id) => {
+      console.log(language_id)
+      console.log(userlanguage_id)
+      if (language_id === userlanguage_id) {
       return true
+      }
+      else {
+        return false
+      }
     }
   }

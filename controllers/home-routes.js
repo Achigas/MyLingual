@@ -48,7 +48,6 @@ const { response } = require('express');
 // });
 
 router.get('/', (req, res) => {
-  console.log(req)
     Post.findAll({
       attributes: [
         'id',
@@ -86,7 +85,7 @@ router.get('/', (req, res) => {
       res.render('homepage', {
         posts, 
         loggedIn: req.session.loggedIn,
-        language_id: JSON.stringify(res.locals.session.language_id)
+        languageid: req.session.language_id
       });
     })
     .catch(err => {
