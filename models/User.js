@@ -30,14 +30,14 @@ User.init(
                 len: [8]
             }
         },
-        // language_id: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: true,
-        //     references: {
-        //         model: 'languages',
-        //         key: 'id'
-        //     }
-        // }
+        language_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'languages',
+                key: 'id'
+            }
+        }
     },
     {
         hooks: {

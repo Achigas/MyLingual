@@ -9,14 +9,15 @@
     <div class="card" style="width: 55rem;">
         <h5 class="card-header">See what everyone is sharing!</h5>
         <div class="card-body">
-
-          <ul class="post-list">
+          <ol class="post-list">
             {{#each posts as |post|}}
+            {{#if (isCurrentLanguage ../languageid user.language_id)}}
             <li>
               {{> post-info post }}
             </li>
-            {{/each}}
-          </ul>
+           {{/if}}
+          {{/each}}
+          </ol>
 
       </div>
     </div>

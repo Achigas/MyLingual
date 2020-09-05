@@ -12,7 +12,7 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/guy1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
@@ -21,7 +21,7 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/lady1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
@@ -30,7 +30,7 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/lady3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
@@ -42,7 +42,7 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/guy2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
@@ -51,7 +51,7 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/lady2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
@@ -60,67 +60,48 @@
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
-                    <input type="radio" aria-label="Radio button for following text input">
+                    <input name="radio" type="radio" aria-label="Radio button for following text input">
                     </div>
                     </div>
                     <img src="./images/guy3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
         </div>
         
-
-            <br> 
+        {{!-- <br> 
                 
                 <div class="form-group container">
-                <div class="text-center">
-                <button type="submit" class="row btn btn-primary btn-warning ">Choose</button>
-                </div>
-                </div>
+                    <div class="text-center">
+                    <button type="submit" class="row btn btn-primary btn-warning ">Choose</button>
+                    </div>
+                </div> --}}
         </div>
     </div>
 </div>
             
 <br>
 
-
 <div class="row justify-content-center"> 
     <div class="card" style="width: 45rem;">
-        <h5 class="card-header">Language:</h5>
+        <h5 class="card-header">User Info:</h5>
         <div class="card-body">
        
             <form class="student-info-form">
                 <div class="col-lg-7 form-field">
                     <label for="primary-language"><strong>Primary Language:</strong></label>
-                    <div class="dropdown bg-light">
-                        <select id="languageFilter" class="form-control">
-                            <option selected="true" disabled="disabled">Choose your primary language</option>
-                            <option class="dropdown-item" value="free">English</option> 
-                            <option class="dropdown-item" value="basic">Spanish</option> 
-                            <option class="dropdown-item" value="premium">Russian</option> 
-                        </select>
-                    </div>
+                       <input type="text" class="form-control" id="primary-language" placeholder="Enter Language">
                 </div>
-
+                <br>
                  <div class= "col-lg-7 form-field">
                     <label for="learning-language"><strong>Learning Language:</strong></label>
-                    <select id="languageFilter" class="form-control">
-                        <option selected="true" disabled="disabled">Choose your primary language</option>
-                        <option class="dropdown-item" value="free">English</option> 
-                        <option class="dropdown-item" value="basic">Spanish</option> 
-                        <option class="dropdown-item" value="premium">Russian</option> 
-                    </select>
+                    <input type="text" class="form-control" id="learning-language" placeholder="Enter Language">
                 </div>
-
-                <div class= "col-lg-5 form-field">
+                <br>
+                <div class= "col-lg-7 form-field">
                     <label for='levelFilter'><strong>Level:</strong> </label>
-                    <select id='levelFilter' class='form-control'>
-                    <option>Choose one.</option>
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                    </select>
+                    <input type="text" class="form-control" id="level-language" placeholder="Enter Level (Beginner, Intermediate, Advanced)">
                 </div>
-                <br> 
-                    
+                
+                <br>    
                 <div class="form-group container">
                     <div class="text-center">
                         <button type="submit" class="row btn btn-primary btn-warning ">Submit</button>

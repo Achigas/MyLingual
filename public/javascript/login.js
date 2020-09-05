@@ -29,13 +29,17 @@ async function signupFormHandler(event) {
     // event.preventDefautl();
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const language_id = document.querySelector('#languageFilter').value
+    //const language_id = parseInt(language)
+    //console.log(language_id)
 
-    if (username && password) {
+    if (username && password && language_id) {
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
                 username,
-                password
+                password,
+                language_id
             }),
             headers: { 'Content-Type': 'application/json' }
         });
