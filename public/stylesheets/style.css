@@ -12,12 +12,14 @@
 
   .navbar-brand {
     font-weight: normal;
+    margin-left: 2%;
   }
   
   a {
     text-decoration: none;
     font-weight: bold;
     transition: color .1s;
+    color:  #0d448c;
   }
   
   a:hover {
@@ -26,15 +28,10 @@
 
   #logout {
     font-size: 85%;
-    color: #3486eb;
+    color:  #0d448c;
     font-weight: bold;
+    margin-left: 52%
   }
-
-  .login  {
-    font-size: 85%;
-    color: #3486eb;
-  }
-
 
   .post-list {
     margin: 0;
@@ -84,7 +81,8 @@
     display: block;
     margin: -1.5% 0 2% 0;
     font-size: 75%;
-    color:black;
+    color: black;
+    font-weight: bold;
   }
 
   .meta {
@@ -100,6 +98,7 @@
   .comment {
     padding: 1%;
     margin-bottom: 1%;
+    font-size: 85%;
   }
   
   .comment:nth-child(odd) {
@@ -107,9 +106,9 @@
   }
   
   .comment .meta {
-    font-size: 90%;
+    font-size: 85%;
     margin-bottom: .5%;
-    opacity: .6;
+    color: black;
   }
   
   

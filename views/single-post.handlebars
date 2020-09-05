@@ -1,48 +1,42 @@
 <a href="/">&larr; Back to Homepage</a>
 
-<br> <br>
+ <div>
+        <h1 class="text-center font-italic">Comment</h1>
+          <p class="text-center lead">Leave your thoughts below.</p>
+    </div> 
 
 <div class="row justify-content-center">
     <div class="card" style="width: 55rem;">
-        <h5 class="card-header">Leave comments below.</h5>
+        <h5 class="card-header">Create Comment</h5>
         <div class="card-body">
          {{> post-info post }}
-       </div>
+    
+      {{#if loggedIn}}
+          <form class="comment-form">  
+            <div class="form-group">
+                <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Enter comment."></textarea>
+            </div>
+            
+            <div>
+               <button class="btn btn-primary btn-warning" type="submit"><strong>Add Comment</strong> </button>
+            </div>
+              </form>
+      {{/if}}
     </div>
  </div>
+</div>
 
-
-{{#if loggedIn}}
-
-<div class="row justify-content-center">
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-              <form class="comment-form">
-                
-                <div class="form-group">
-                    <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Enter comment."></textarea>
-                </div>
-            
-                <div>
-                  <button class="btn btn-primary btn-warning" type="submit">Add Comment</button>
-                </div>
-
-              </form>
-            </div>
-      </div>
-  </div>
-{{/if}}
+<br>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
 
-<br><br>
 
 
 <div class="row justify-content-center">
     <div class="card" style="width: 55rem;">
-        <h6 class="card-header"><strong>Comments:</strong></h6>
+        <h6 class="card-header"><strong>All Comments</strong></h6>
         <div class="card-body comments">
 
               {{> comments post.comments }}
