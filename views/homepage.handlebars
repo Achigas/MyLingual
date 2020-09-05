@@ -13,9 +13,11 @@
 
           <ol class="post-list">
             {{#each posts as |post|}}
+            {{#if isCurrentLanguage}}
             <li>
               {{> post-info post }}
             </li>
+            {{/if}}
             {{/each}}
           </ol>
 
