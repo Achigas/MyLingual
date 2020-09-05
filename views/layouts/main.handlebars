@@ -6,89 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>MyLingual</title>
-  
+
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 
 <body>
-   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand font-weight-bold" href="#">MyLingual</a>
-            {{#if loggedIn}}
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link home" href="/">Home
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/dashboard">Dashboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/meetpeople">Meet People</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/explore">Explore</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn-no-style" id="logout" href="/explore">Log Out</a>
-                  </li>
-                </ul>
-            </div>
-            {{else}}
-            
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="/">Home
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/dashboard">Dashboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/meetpeople">Meet People</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/explore">Explore</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/signup">Sign Up</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link btn-no-style" href="/login">Log In</a>
-                  </li>
-                </ul>
-              </div>
-            {{/if}}
-        </div>
+  <div class="wrapper">
+   <header >
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      {{#if loggedIn}}
+      <a class="navbar-brand" href="/">Homepage</a>
+      <a class="navbar-brand" href="/dashboard">Dashboard</a>
+      <a class="navbar-brand" href="/meet-people">Meet People</a>
+      <a class="navbar-brand" href="/explore">Explore</a>
+      <button id="logout" class="btn-no-style">Sign Out</button>
+      {{else}}    
+       <a class="navbar-brand" href="/">Homepage</a>
+       <a class="navbar-brand" href="/login">Dashboard</a>
+       <a class="navbar-brand" href="/login">Meet People</a>
+       <a class="navbar-brand" href="/login">Explore</a>
+       <a class="btn-no-style" href="/login">Sign In</a>
+      {{/if}}
     </nav>
-
-    <header class="py-5 bg-image-full">
-        <img class="img-fluid d-block mx-auto" src="Mylingual1.png" alt="">
+      <img class="hero py-5 bg-image-full img-fluid d-block mx-auto" src="./images/Mylingual1.png" alt="">
     </header>
 
     <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Let's learn together!</h1>
-      <p class="lead">With this application, people are able to learn a language together.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-    </div>
-  </section>
-    
      <main>
          {{{body}}}
      </main>
+    </div>
+
+ 
+    <footer>
+      <div class="content-center">
+        <h6>MyLingual Company,Inc <br><small class="form-text text-muted">© 2020 MyLingual, Inc. All rights reserved. <br><br> <a href="/">Terms and Conditions</a> | | <a href="/">Privacy Policy</a></small></h6><br>
+           <a href="mailto: mylingual@example-email.com">Have a comment or question? Reach out!</a>
+      </div>
+    </footer>
+
   
   {{#if loggedIn}}
-   <!-- <script src="/javascript/logout.js"></script> -->
+   <script src="/javascript/logout.js"></script>
   {{/if}}
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -96,6 +57,4 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
  
 </body>
-
-
 </html>

@@ -2,21 +2,15 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 
-// // route that renders the homepage
-// router.get('/', (req, res) => {
-//   res.render('homepage', {
-//   });
-// });
-
 
 router.get('/', (req, res) => {
-    console.log(req.session);
     Post.findAll({
       attributes: [
         'id',
         'post_url',
         'title',
-        'created_at'
+        'created_at',
+        'post'
       ],
       include: [
         {
@@ -45,6 +39,8 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
   });
+
+// route that renders login
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {

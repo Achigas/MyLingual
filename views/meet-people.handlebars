@@ -1,17 +1,22 @@
-<div>
-  <h1>Meet People</h1>
-</div> 
+ <div>
+        <h1 class="text-center font-italic">Meet People</h1>
+          <p class="lead">See who else is learning the same language as you and connect.</p>
+    </div> 
 
-<article class="people">
-   <div class="photo">
-    <span> photo placeholder</span>
+<br>
+<div class="row justify-content-center">
+    <div class="card" style="width: 55rem;">
+        <h5 class="card-header">Say hello to other learners!</h5>
+        <div class="card-body">
+
+          <ol class="user-list">
+            {{#each users as |user|}}
+            <li></li>
+             <span>{{user.username}}</span> 
+            </li>
+            {{/each}}
+          </ol>
+
+      </div>
+    </div>
   </div>
-  <div class="name">
-    <span>{{user.username}}</span>
-  </div>
-  <div class="meta">
-     Primary Language: 
-    ||
-    Learning Level: {{language.level}}
-  </div>
-</article>
