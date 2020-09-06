@@ -1,0 +1,37 @@
+<br>
+<a href="/">&larr; Back to Homepage</a>
+<div>
+    <h1 class="text-center font-italic">Comment</h1>
+     <p class="text-center lead">Leave your thoughts below.</p>
+</div> 
+<div class="row justify-content-center">
+    <div class="card" style="width: 50rem;">
+        <h5 class="card-header text-center">Create Comment</h5>
+        <div class="card-body">
+         {{> post-info post }}
+          {{#if loggedIn}}
+              <form class="comment-form">  
+                <div class="form-group">
+                    <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Enter Comment"></textarea>
+                </div>
+                
+                <div>
+                  <button class="btn btn-primary btn-warning" type="submit"><strong>Add Comment</strong> </button>
+                </div>
+                  </form>
+          {{/if}}
+        </div>
+    </div>
+</div>
+<br>
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
+<div class="row justify-content-center">
+    <div class="card" style="width: 50rem;">
+        <h5 class="card-header text-center">All Comments</h5>
+        <div class="card-body comments">
+              {{> comments post.comments }}  
+        </div>
+    </div>
+</div>

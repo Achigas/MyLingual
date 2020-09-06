@@ -1,0 +1,24 @@
+    <br>
+    <div>
+        <h1 class="text-center font-italic">Let's learn a language together!</h1>
+          <p class="text-center lead">Meet people learning the same language, share resources and build community. <br> All levels welcome!</p>
+    </div> 
+    <br>
+    <div class="row justify-content-center">
+        <div class="card" style="width: 60rem;">
+            <h5 class="card-header text-center">See what everyone is sharing about the language you are learning!</h5>
+            <div class="card-body">
+              <ol class="post-list">
+                {{#each posts as |post|}}
+                {{#if (isCurrentLanguage ../languageid user.language_id)}}
+                <li>
+                  {{> post-info post }}
+                </li>
+              {{/if}}
+              {{/each}}
+              </ol>
+            </div>
+          </div>
+      </div>
+
+  

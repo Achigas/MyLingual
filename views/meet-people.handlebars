@@ -1,0 +1,22 @@
+ <br>
+ <div>
+     <h1 class="text-center font-italic">Meet People</h1>
+     <p class="text-center lead">Connect with people learning the same language as you.</p>
+</div> 
+
+<br>
+<div class="row justify-content-center">
+    <div class="card" style="width: 50rem;">
+        <h5 class="card-header text-center">Say hello to other learners!</h5>
+        <div class="card-body">
+          <ol class="user-list">
+            {{#each users as |user|}}
+            <li class="meet-user text-center">
+             <strong>Username:</strong> <span>{{username}}</span><br>
+             <strong>Learning Language:</strong> <span>{{language.language_name}}</span>  
+            </li>
+            {{/each}}
+          </ol>
+       </div>
+    </div>
+</div>
