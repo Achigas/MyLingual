@@ -19,7 +19,7 @@ This is a social media application used to connect peopl ewho are learning the s
 []()
 
 ## Screenshots
-![MyLingual](../public/images/Mylingual.png)
+![MyLingual](./images/Mylingual.png)
 
 ## Setup
 * Clone GitHub repository 
