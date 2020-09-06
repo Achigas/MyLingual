@@ -16,9 +16,6 @@ router.use('/explore', exploreRoutes);
 
 router.use(function (req, res, next) {
   res.locals.session = req.session;
-  console.log("ITS WORKINGGGGGGGG")
-  console.log(" ---------------- ")
-  console.log("-----------------")
   next();
 });
 
