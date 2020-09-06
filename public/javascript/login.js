@@ -30,8 +30,6 @@ async function signupFormHandler(event) {
     const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
     const language_id = document.querySelector('#languageFilter').value
-    //const language_id = parseInt(language)
-    //console.log(language_id)
 
     if (username && password && language_id) {
         const response = await fetch('/api/users', {

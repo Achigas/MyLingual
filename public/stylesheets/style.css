@@ -12,7 +12,6 @@
 
   .navbar-brand {
     font-weight: normal;
-    margin-left: 2%;
   }
   
   a {
@@ -32,7 +31,6 @@
     font-size: 85%;
     color:  #0d448c;
     font-weight: bold;
-    margin-left: 52%
   }
 
   #logout:hover {
@@ -166,6 +164,21 @@
     font-weight: bold;
   }
 
+
+   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .navbar-brand, #logout, .login {
+    font-size: 75%;
+  }
+}
+
+   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+   @media screen and (max-width: 575px) {
+    .navbar-brand, #logout, .login {
+      font-size: 60%;
+    }
+  }
+  
 
 
 
