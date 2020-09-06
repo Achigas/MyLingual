@@ -1,13 +1,13 @@
   <br>
-    <div>
-        <h1 class="text-center font-italic">Your Dashboard</h1>
-          <p class="text-center lead">Choose your avatar, languages and level, and start sharing posts.</p>
-    </div> 
+<div>
+     <h1 class="text-center font-italic">Your Dashboard</h1>
+     <p class="text-center lead">Choose your avatar, languages and level, and start sharing posts.</p>
+</div> 
 
 <br>
 <div class="row justify-content-center"> 
     <div class="card" style="width: 50rem;">
-        <h5 class="card-header">User Info</h5>
+        <h5 class="card-header text-center">Create New Profile</h5>
         <div class="card-body">
              <label class="avatar-title" for="avatar"><strong>Avatar:</strong></label>
             <div class="row avatars">
@@ -19,7 +19,6 @@
                     </div>
                     <img src="/images/guy1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -28,7 +27,6 @@
                     </div>
                     <img src="/images/lady1.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-              
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -37,10 +35,8 @@
                     </div>
                     <img src="/images/lady3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-
                 <!-- Force next columns to break to new line at md breakpoint and up -->
                 <div class="w-100 d-none d-md-block"></div>
-              
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -49,7 +45,6 @@
                     </div>
                     <img src="/images/guy2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -58,7 +53,6 @@
                     </div>
                     <img src="/images/lady2.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-
                 <div class="col-6 col-sm-4 input-group">
                     <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -67,12 +61,12 @@
                     </div>
                     <img src="/images/guy3.png" style="width: 25%;" class="rounded img-thumbnail" alt="...">
                 </div>
-         </div>
-          <br>
+            </div>
+            <br>
             <form class="student-info-form">
                 <div class="col-lg-7 form-field">
                     <label for="primary-language"><strong>Primary Language:</strong></label>
-                       <input type="text" class="form-control" id="primary-language" placeholder="Enter Language">
+                    <input type="text" class="form-control" id="primary-language" placeholder="Enter Language">
                 </div>
                 <br>
                  <div class= "col-lg-7 form-field">
@@ -84,43 +78,34 @@
                     <label for='levelFilter'><strong>Learning Level:</strong> </label>
                     <input type="text" class="form-control" id="level-language" placeholder="Beginner, Intermediate, Advanced">
                 </div>
-                
                 <br>    
                 <div class="form-group container">
                     <div class="text-center">
                         <button type="submit" class="row btn btn-primary btn-warning "><strong>Create Profile</strong></button>
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
 </div>
-
-<br>   
-      
+<br>        
 <div class="row justify-content-center">
     <div class="card" style="width: 50rem;">
-        <h5 class="card-header">Create New Post</h5>
+        <h5 class="card-header text-center">Create New Post</h5>
         <div class="card-body">
-      
             <form class="new-post-form">
-        
             <div class="form-group">
                 <label for="post-title"><strong>Title:</strong></label>
                 <input type="text" class="form-control" id="post-title" placeholder="Enter Title">
             </div>
-
             <div class="form-group">
                 <label for="post-url"><strong>Link:</strong></label>
                 <input name="post-url" class="form-control" id="post-url" placeholder="Enter URL">
             </div>
-
             <div class="form-group">
                 <label for="post"><strong>Content:</strong></label>
                 <textarea id="post" class="form-control" name="post" placeholder="Enter Text"></textarea>
             </div>
-
             {{!-- <div class='form-field'>
                 <label for='categoryFilter'><strong>Category:</strong> </label>
                 <select id='categoryFilter' class='form-control'>
@@ -130,43 +115,37 @@
                 <option value="Video">Video</option>
                 </select>
             </div> --}}
-            
             <br>
-
             <div class="form-group container">
                 <div class="text-center">
                     <button type="submit" class="row btn btn-primary btn-warning "><strong>Create Post</strong> </button>
                 </div>
             </div>
-
             </form>
         </div>
     </div>
 </div>
-
 <br>  
 <div class="row justify-content-center">
     <div class="card" style="width: 50rem;">
-        <h5 class="card-header">Previous Posts</h5>
+        <h5 class="card-header text-center">Previous Posts</h5>
         <div class="card-body">    
-{{#if posts.length}}
-<section>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-     <h6><strong> <a href="{{post_url}}" target="_blank">{{title}}</a> </strong></h6>
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+            {{#if posts.length}}
+            <section>
+            <ol>
+                {{#each posts as |post|}}
+                <li>
+                <h6><strong> <a href="{{post_url}}" target="_blank">{{title}}</a> </strong></h6>
+                <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+                </li>
+                {{/each}}
+            </ol>
+            </section>
+            {{/if}}
        </div>
     </div>
 </div>   
-
 <br>  
 <br> 
-
 <script src="/javascript/add-post.js"></script>
 

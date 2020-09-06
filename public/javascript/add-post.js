@@ -21,7 +21,7 @@ async function newFormHandler(event) {
     if (response.ok) {
         document.location.replace('dashboard');
     } else {
-        alert("Please add a post!");
+        alert("Please add a complete post!");
     }
 }
 // ROCHELLE'S NOTE FOR DROPDOWNS
