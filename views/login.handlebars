@@ -6,7 +6,7 @@
     <br>
 
   <div class="row justify-content-center">
-    <div class="card" style="width: 50rem;">
+    <div class="card" style="width: 45rem;">
       <div class="card-body">
         
         <form class="signup-form">
@@ -28,6 +28,16 @@
             </div>
 
             {{!-- <br> --}}
+                  <div class= "col-lg-5 form-field">
+                    <label for="learning-language"><strong>Primary Language:</strong></label>
+                    <select id="languageFilter" class="form-control">
+                        <option selected="true" disabled="disabled">Choose your primary language</option>
+                        <option class="dropdown-item" value="free">English</option> 
+                        <option class="dropdown-item" value="basic">Spanish</option> 
+                        <option class="dropdown-item" value="premium">Russian</option> 
+                    </select>
+                  </div>
+            <br> 
             
                   <div class= "col-lg-10 form-field">
                     <label for="learning-language"><strong>Learning Language:</strong></label>
@@ -43,16 +53,6 @@
 
             
                 <br>
-               <div class= "col-lg-5 form-field">
-                    <label for="learning-language"><strong>Primary Language:</strong></label>
-                    <select id="languageFilter" class="form-control">
-                        <option selected="true" disabled="disabled">Choose your primary language</option>
-                        <option class="dropdown-item" value="free">English</option> 
-                        <option class="dropdown-item" value="basic">Spanish</option> 
-                        <option class="dropdown-item" value="premium">Russian</option> 
-                    </select>
-                  </div>
-            <br> 
             <div class="form-group container">
             <div class="text-center">
               <button type="submit" class="row btn btn-primary btn-warning ">Sign Up</button>

@@ -1,19 +1,20 @@
   <div>
         <h1 class="text-center font-italic">Explore</h1>
-          <p class="text-center lead">See new posts and content in all languages.</p>
+          <p class="text-center lead">See posts and content in all languages.</p>
     </div> 
 <br>
  <div class="row justify-content-center">
-    <div class="card" style="width: 55rem;">
-        <h5 class="card-header">Start exploring!</h5>
+    <div class="card" style="width: 65rem;">
+        <h5 class="card-header">Start exploring additional languages!</h5>
         <div class="card-body">
-
-          <ol class="post-list">
+        <ol class="post-list">
             {{#each posts as |post|}}
+            {{#if (isCurrentLanguage ../languageid user.language_id)}}
             <li>
               {{> post-info post }}
             </li>
-            {{/each}}
+           {{/if}}
+          {{/each}}
           </ol>
 
       </div>
