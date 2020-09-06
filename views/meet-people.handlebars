@@ -1,129 +1,22 @@
-<!--<div>
-        <h1 class="text-center font-italic">Meet People</h1>
-          <p class="lead">See who else is learning the same language as you and connect.</p>
-    </div> 
+ <br>
+ <div>
+     <h1 class="text-center font-italic">Meet People</h1>
+     <p class="text-center lead">Connect with people learning the same language as you.</p>
+</div> 
 
 <br>
 <div class="row justify-content-center">
-    <div class="card" style="width: 55rem;">
-        <h5 class="card-header">Say hello to other learners!</h5>
+    <div class="card" style="width: 50rem;">
+        <h5 class="card-header text-center">Say hello to other learners!</h5>
         <div class="card-body">
-
           <ol class="user-list">
             {{#each users as |user|}}
-            <li></li>
-             <span>{{user.username}}</span> 
+            <li class="meet-user text-center">
+             <strong>Username:</strong> <span>{{username}}</span><br>
+             <strong>Learning Language:</strong> <span>{{language.language_name}}</span>  
             </li>
             {{/each}}
           </ol>
-
-      </div>
+       </div>
     </div>
 </div>
-
--->
-      <div>
-        <h1 class="text-center font-italic">Meet Other Learners</h1>
-    </div> 
-
-    <br>
-
-    <div class="section">
-      <div class="container">
-        <div class="row">
-              <div class="col-md-12">
-            </div>
-        </div>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning Russian</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/lady4.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Lydia Woodbury</h5></a>
-                        <p class="card-text">Learning Russian here! Anyone interested in learning the same language?</p>
-                        <p class="card-text meta">Primary Language: <strong>English<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning English</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/guy4.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Quentin Radcliffe</h5></a>
-                        <p class="card-text">Howdy! Just recently moved to LA from Russia last year. Hoping to find someone </p>
-                        <p class="card-text meta">Primary Language: <strong>Russian<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning English</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/guy5.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Henry Williams</h5></a>
-                        <p class="card-text">Aspiring actor here! Came from Spain 2 years ago and working on my accent.</p>
-                        <p class="card-text meta">Primary Language: <strong>Spanish<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning Japanese</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/lady5.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Clara Burgess</h5></a>
-                        <p class="card-text">Always been interested in Japanese culture! Let's link! Would love to learn Japanese!</p>
-                        <p class="card-text meta">Primary Language: <strong>English<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning French</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/guy1.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Ramon Fastwaters</h5></a>
-                        <p class="card-text">Would love to learn French. I always find it fascinating when someone speaks french!</p>
-                        <p class="card-text meta">Primary Language: <strong>English<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning Chinese</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/lady2.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Becca Frostbite</h5></a>
-                        <p class="card-text">English teacher in Hong Kong! Would love to learn Chinese to communicate better.</p>
-                        <p class="card-text meta">Primary Language: <strong>English<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="card profile-card-2">
-              <h5 class="card-header text-center">Learning English</h5>
-                    <div class="card-body pt-5">
-                        <img src="./images/guy5.png" style="width: 30%;" alt="profile-image" class="profile"/>
-                        <a href="#"><h5 class="card-title name"><!--{{user.username}}-->Richie Le</h5></a>
-                        <p class="card-text">Wants to learn English better! Came from Vietname last year.</p>
-                        <p class="card-text meta">Primary Language: <strong>Vietnamese<!--{{language.level}}--></strong></p>
-                    </div>
-              </div>
-          </div>
-            
-        </div>
-      </div>
-  </div>

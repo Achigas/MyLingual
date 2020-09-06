@@ -29,6 +29,11 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(session(sess));
 
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
+});
+
 // turn on routes
 app.use(routes);
 

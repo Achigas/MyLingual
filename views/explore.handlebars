@@ -1,22 +1,20 @@
-<div class="row justify-content-center">
-      <div class="card" style="width: 45rem;">
-            <h5 class="card-header">Explore</h5>
-            <div class="card-body">
-            
-              <form class="explore-form">
-                <div class='form-field'>
-                  <label for='categoryFilter'><strong>Choose by category:</strong> </label>
-                  <select id='categoryFilter' class='form-control'>
-                    <option>Choose one.</option>
-                    <option value="Music">Music</option>
-                    <option value="Literature">Literature</option>
-                    <option value="Video">Video</option>
-                  </select>
-                  <button type="submit" class="btn">Search</button>
-                </div>
-              </form>
-
-            </div>
+  <br>
+  <div>
+       <h1 class="text-center font-italic">Explore</h1>
+         <p class="text-center lead">See posts and content in all languages.</p>
+  </div> 
+  <br>
+  <div class="row justify-content-center">
+    <div class="card" style="width: 60rem;">
+        <h5 class="card-header text-center">Start exploring additional languages!</h5>
+        <div class="card-body">
+        <ol class="post-list">
+            {{#each posts as |post|}}
+            <li>
+              {{> post-info post }}
+            </li>
+          {{/each}}
+          </ol>
         </div>
-</div>
-
+    </div>
+ </div>

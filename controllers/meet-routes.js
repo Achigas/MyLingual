@@ -1,27 +1,33 @@
   const router = require('express').Router();
   const sequelize = require('../config/connection');
-  const { User } = require('../models');
-  const withAuth = require('../utils/auth');
+  const { User, Language } = require('../models');
+
   
-  router.get('/', withAuth, (req, res) => {
-    User.findAll({
-      where: {
-        // use the ID from the session
-        username: req.session.username
-      },
-      attributes: [
-        'id'
-      ],
-    })
-    .then(dbUserData => {
-      // serialize data before passing to template
-      const users = dbUserData.map(username => username.get({ plain:true }));
-      res.render('meet-people', { users, loggedIn: true });
-    })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-  });
-    
+router.get('/', (req, res) => {
+    User.findAll(
+      {
+        attributes: [
+          'username',
+          'language_id'
+        ],
+        include: 
+          {
+            model: Language, 
+            attributes: ['id', 'language_name'],
+        
+          },
+      })
+      .then(dbUserData => {
+        const users = dbUserData.map(user => user.get({ plain: true }));
+        res.render('meet-people', {
+          users,
+          loggedIn: req.session.loggedIn
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      })
+});
+
     module.exports = router;

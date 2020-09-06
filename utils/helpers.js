@@ -17,5 +17,13 @@ module.exports = {
         return `${word}s`;
       }
       return word;
+    },
+    isCurrentLanguage: (language_id, userlanguage_id) => {
+      if (language_id === userlanguage_id) {
+      return true
+      }
+      else {
+        return false
+      }
     }
   }

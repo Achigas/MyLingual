@@ -3,7 +3,11 @@
     <a class= "maintitle" href="{{post_url}}" target="_blank">{{title}}</a>
   </div>
   <div class="meta">
+<<<<<<< HEAD
       <small>Posted by {{user.username}} on {{format_date created_at}}
+=======
+      Posted by {{user.username}} in {{user.language.language_name}} on {{format_date created_at}}
+>>>>>>> 8266ebed287eb7c9b2cbc6f3ed89c1bc212d4b95
     ||
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
     </small>

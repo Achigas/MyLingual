@@ -1,57 +1,55 @@
+  <br>
   <a href="/dashboard">&larr; Back to Dashboard</a>
-  
+  <div>
+      <h1 class="text-center font-italic">Edit Post</h1>
+        <p class="text-center lead">Make changes to posts below.</p>
+  </div> 
   <div class="row justify-content-center">
-        <div class="card" style="width: 45rem;">
-            <h5 class="card-header">Edit Post</h5>
-            <div class="card-body">
- 
-  <form class="edit-post-form">
-   <div class="form-group">
-      <label for="post-title"><strong>Title:</strong></label>
-      <input name="post-title" type="text" class="form-control" value="{{post.title}}" />
-    </div>
-     <div class="form-group">
-       <label for="post-url"><strong>Link:</strong></label>
-      <input name="post-url" type="text" class="form-control" value="{{post.post_url}}" />
-    </div>
-    <div>
-      Posted by you on {{ format_date post.created_at }}
-      ||
-      <a href="/post/{{ post.id }}">{{ post.comments.length }} {{ format_plural "comment" post.comments.length }}</a>
-    </div>
-    <br>
-    <strong>Content:</strong>
-    <div class="form-group">
-        <textarea class="form-control" name="post" rows="3">{{post.post}}</textarea>
-    </div>
-      <button type="submit" class="btn btn-primary btn-warning">Save Post</button>
-      <button type="button" class="delete-post-btn  btn btn-primary btn-warning">Delete Post</button>
-  </form>
-  <br><br>
-  <form class="comment-form">
-    <strong>Comment:</strong>
-     <div class="form-group">
-      <textarea class="form-control" name="comment-body" id="comment-body" rows="3"></textarea>
-    </div>
-    <div>
-      <button type="button" class="btn btn-primary btn-warning">Add Comment</button>
-    </div>
-  <br> 
-
-<div class="row justify-content-center">
-    <div class="card" style="width: 55rem;">
-        <h6 class="card-header"><strong>Comments:</strong></h6>
-        <div class="card-body comments">
-
-               {{#if post.comments.length}}
-               {{> comments post.comments}}
-              {{/if}}
-          
+        <div class="card" style="width: 50rem;">
+            <h5 class="card-header text-center">Edit Current Post</h5>
+        <div class="card-body">
+          <form class="edit-post-form">
+          <div class="form-group">
+              <label for="post-title"><strong>Title:</strong></label>
+              <input name="post-title" type="text" class="form-control" value="{{post.title}}" />
+            </div>
+            <div class="form-group">
+              <label for="post-url"><strong>Link:</strong></label>
+              <input name="post-url" type="text" class="form-control" value="{{post.post_url}}" />
+            </div>
+            <div>
+              Posted by you on {{ format_date post.created_at }}
+              ||
+              <a href="/post/{{ post.id }}">{{ post.comments.length }} {{ format_plural "comment" post.comments.length }}</a>
+            </div>
+            <br>
+            <strong>Content:</strong>
+            <div class="form-group">
+                <textarea class="form-control" name="post" rows="3">{{post.post}}</textarea>
+            </div>
+              <button type="submit" class="btn btn-primary btn-warning"><strong>Save Post</strong></button>
+              <button type="button" class="delete-post-btn  btn btn-primary"><strong>Delete Post</strong></button>
+          </form>
+          <br>
+          <form class="comment-form">
+            <strong>Comment:</strong>
+            <div class="form-group">
+              <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Explain Edit Here"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary btn-warning"><strong>Add Comment</strong></button>
+            </div>
+          <br> 
+  <div class="row justify-content-center">
+      <div class="card" style="width: 50rem;">
+           <h6 class="card-header single-page-comment text-center">All Comments</h6>
+           <div class="card-body comments">
+              {{#if post.comments.length}}
+              {{> comments post.comments}}
+              {{/if}}   
+           </div>
       </div>
-    </div>
   </div>
-
-
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
