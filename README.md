@@ -16,10 +16,10 @@ A social media platform that connects people learning the same languages!
 This is a social media application used to connect peopl ewho are learning the smae languages. The user will be able to post links to helpful articles, videos, and songs that will help language learners to immerse themselves in a knowledge-filled community. When a user logs-in, they see posts by other people learning the same language. 
 
 ## Deployed Link
-[]()
+[MyLingual]()
 
 ## Screenshots
-![MyLingual](/images/Mylingual.png)
+![MyLingual](./public/images/Mylingual.png)
 
 ## Setup
 * Clone GitHub repository 
@@ -50,7 +50,7 @@ This is a social media application used to connect peopl ewho are learning the s
 * ISC
 
 ## Inspiration
-UCLA week 15 and 16 Project and to help people use the language they want to learn!
+UCLA week 15 and 16 Project and to help people practice their language!
 
 This project idea was created by Lauren Euge (leuge) and coded by Briana Damota, Rochelle Ruiz, and Alex Chigas. 
 
