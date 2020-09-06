@@ -25,8 +25,10 @@ This is a social media application used to connect peopl ewho are learning the s
 * Clone GitHub repository 
 * run npm install
 * run npm i sequelize
+* run npm i mysql2
 * run npm i express
 * run npm i express-session
+* run npm i express-handlebars
 * run npm i dotenv
     * Create an .env file to add your mysql database, username, and password. 
 
@@ -44,7 +46,6 @@ This is a social media application used to connect peopl ewho are learning the s
 * Express-session
 * Bcrypt
 
-
 ## Licenses
 * MIT license
 * ISC
@@ -52,7 +53,7 @@ This is a social media application used to connect peopl ewho are learning the s
 ## Inspiration
 UCLA week 15 and 16 Project and to help people practice their language!
 
-This project idea was created by Lauren Euge (leuge) and coded by Briana Damota, Rochelle Ruiz, and Alex Chigas. 
+This project idea was created by Lauren Euge (leuge) and coded by Briana Damota, Rochelle Ruiz, Lauren Euge, and Alex Chigas. 
 
 ## Future Developments
 * Allow for official profile creation for friendships
