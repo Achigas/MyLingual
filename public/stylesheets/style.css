@@ -136,12 +136,10 @@ body {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   background: rgb(247, 247, 247);
   width: 100%;
   padding: 40px 35px;
+  align-content: center;
 }
 
 

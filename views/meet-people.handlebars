@@ -5,15 +5,15 @@
 
 <br>
 <div class="row justify-content-center">
-    <div class="card" style="width: 45rem;">
+    <div class="card" style="width: 50rem;">
         <h5 class="card-header">Say hello to other learners!</h5>
         <div class="card-body">
 
           <ol class="user-list">
             {{#each users as |user|}}
             <li class="meet-user">
-             Username: <span>{{username}}</span><br>
-             Learning Language: <span>{{language.language_name}}</span>  
+             <strong>Username:</strong> <span>{{username}}</span><br>
+             <strong>Learning Language:</strong> <span>{{language.language_name}}</span>  
             </li>
             {{/each}}
           </ol>
