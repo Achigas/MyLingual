@@ -164,20 +164,37 @@
     font-weight: bold;
   }
 
+   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+   @media screen and (max-width: 768px) {
+    .lead {
+      font-size: 99%;
+    }
+  }
+
 
    /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
   .navbar-brand, #logout, .login {
     font-size: 75%;
   }
+
+  .lead {
+    font-size: 90%;
+  }
 }
 
    /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-   @media screen and (max-width: 575px) {
+   @media screen and (max-width: 375px) {
     .navbar-brand, #logout, .login {
       font-size: 60%;
     }
+
+    .lead {
+      font-size: 95%;
+    }
   }
+
+
   
 
 
