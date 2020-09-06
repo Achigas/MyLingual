@@ -16,7 +16,7 @@ A social media platform that connects people learning the same languages!
 This is a social media application used to connect peopl ewho are learning the smae languages. The user will be able to post links to helpful articles, videos, and songs that will help language learners to immerse themselves in a knowledge-filled community. When a user logs-in, they see posts by other people learning the same language. 
 
 ## Deployed Link
-[MyLingual]()
+[MyLingual](https://fathomless-reef-91284.herokuapp.com/)
 
 ## Screenshots
 ![MyLingual](./public/images/Mylingual.png)
