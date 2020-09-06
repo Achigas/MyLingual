@@ -28,8 +28,8 @@
     <div class="form-group">
         <textarea class="form-control" name="post" rows="3">{{post.post}}</textarea>
     </div>
-      <button type="submit" class="btn btn-primary btn-warning">Save Post</button>
-      <button type="button" class="delete-post-btn  btn btn-primary btn-warning">Delete Post</button>
+      <button type="submit" class="btn btn-primary btn-warning"><strong>Save Post</strong></button>
+      <button type="button" class="delete-post-btn  btn btn-primary btn-warning"><strong>Delete Post</strong></button>
   </form>
   <br>
   <form class="comment-form">
@@ -38,13 +38,13 @@
       <textarea class="form-control" name="comment-body" id="comment-body" rows="3" placeholder="Explain Edit Here"></textarea>
     </div>
     <div>
-      <button type="submit" class="btn btn-primary btn-warning">Add Comment</button>
+      <button type="submit" class="btn btn-primary btn-warning"><strong>Add Comment</strong></button>
     </div>
   <br> 
 
 <div class="row justify-content-center">
     <div class="card" style="width: 55rem;">
-        <h6 class="card-header"><strong>All Comments</strong></h6>
+        <h6 class="card-header single-page-comment">All Comments</h6>
         <div class="card-body comments">
 
                {{#if post.comments.length}}
