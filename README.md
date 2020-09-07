@@ -13,7 +13,7 @@ An interactive social network that connects people learning the same languages!
 * [Contact](#contact)
 
 ## General info
-This is a web based interactive social network used to connect people who are learning the same languages. The users can post links to helpful resources, like articles, videos, and songs that will help other language learners immerse themselves in a knowledge-filled community. When users log-in, they see posts by other people learning the same language, they can explore posts in additional languages, and meet other language learners. MyLingual makes learning a language with others fun and easy! 
+This is a web based, interactive, social network used to connect people who are learning the same languages. The users can post links to helpful resources, like articles, videos, and songs that will help other language learners immerse themselves in a knowledge-filled community. When users log-in, they see posts by other people learning the same language, they can explore posts in additional languages, and meet other language learners. MyLingual makes learning a language with others fun and easy! 
 
 ## Deployed Link
 [MyLingual](https://fathomless-reef-91284.herokuapp.com/)
